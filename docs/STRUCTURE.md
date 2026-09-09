@@ -19,3 +19,4 @@ stm-balance-website/
 ├── README.md
 ├── astro.config.mjs
 └── package.json
+```
