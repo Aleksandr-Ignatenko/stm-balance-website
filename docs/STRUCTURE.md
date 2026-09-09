@@ -15,6 +15,7 @@ stm-balance-website/
 │   ├── pages/
 │   │   └── index.astro
 │   └── styles/
+│       └── global.css
 │
 ├── README.md
 ├── astro.config.mjs
