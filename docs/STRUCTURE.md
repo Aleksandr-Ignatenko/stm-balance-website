@@ -10,6 +10,7 @@ stm-balance-website/
 │
 ├── src/
 │   ├── components/
+│   │   ├── Footer.astro
 │   │   └── Header.astro
 │   ├── layouts/
 │   │   └── BaseLayout.astro
