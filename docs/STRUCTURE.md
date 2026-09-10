@@ -21,7 +21,8 @@ stm-balance-website/
 │   ├── pages/
 │   │   └── index.astro
 │   └── styles/
-│       └── global.css
+│       ├── global.css
+│       └── mobile.css
 │
 ├── .gitignore
 ├── README.md
