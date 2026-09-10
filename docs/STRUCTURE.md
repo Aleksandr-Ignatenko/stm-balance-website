@@ -18,6 +18,7 @@ stm-balance-website/
 │   │   ├── Hero.astro
 │   │   ├── Institutions.astro
 │   │   ├── Product.astro
+│   │   ├── Team.astro
 │   │   └── Technology.astro
 │   ├── layouts/
 │   │   └── BaseLayout.astro
