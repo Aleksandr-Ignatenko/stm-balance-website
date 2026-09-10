@@ -162,3 +162,48 @@ main {
 .main-navigation a:hover {
   color: #024b86;
 }
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.brand {
+  color: #024b86;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.main-navigation {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.main-navigation a {
+  color: #111111;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.main-navigation a:hover {
+  color: #024b86;
+}
