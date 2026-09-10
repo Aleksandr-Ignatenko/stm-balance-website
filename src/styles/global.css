@@ -26,3 +26,48 @@ body {
 main {
   width: 100%;
 }
+
+.hero {
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 24px;
+}
+
+.hero-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.hero-label {
+  margin: 0 0 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #024b86;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(48px, 8vw, 88px);
+  line-height: 1;
+  color: #024b86;
+}
+
+.hero h2 {
+  margin: 24px 0 0;
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.15;
+  font-weight: 600;
+}
+
+.hero-description {
+  margin: 24px 0 0;
+  max-width: 640px;
+  font-size: 20px;
+  line-height: 1.6;
+}
