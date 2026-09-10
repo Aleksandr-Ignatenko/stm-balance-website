@@ -2,6 +2,9 @@
 
 ```text
 stm-balance-website/
+├── .github/
+│   └── workflows/
+│       └── build.yml
 │
 ├── docs/
 │   └── STRUCTURE.md
