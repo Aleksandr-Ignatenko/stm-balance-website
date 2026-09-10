@@ -27,3 +27,4 @@ stm-balance-website/
 ├── astro.config.mjs
 └── package.json
 ```
+_Last updated: 2026-09-10_
