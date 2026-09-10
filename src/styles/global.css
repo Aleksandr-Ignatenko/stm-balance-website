@@ -228,6 +228,33 @@ main {
 }
 
 /* =========================================================
+   TEAM
+   ========================================================= */
+
+.team-section {
+  width: 100%;
+  padding: 96px 24px;
+  background: #ffffff;
+}
+
+.team-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-content {
+  max-width: 760px;
+}
+
+.team-section h2 {
+  margin: 0;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.15;
+  font-weight: 600;
+}
+
+/* =========================================================
    FOOTER
    ========================================================= */
 
