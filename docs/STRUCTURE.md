@@ -16,7 +16,8 @@ stm-balance-website/
 │   │   ├── Footer.astro
 │   │   ├── Header.astro
 │   │   ├── Hero.astro
-│   │   └── Product.astro
+│   │   ├── Product.astro
+│   │   └── Technology.astro
 │   ├── layouts/
 │   │   └── BaseLayout.astro
 │   ├── pages/
