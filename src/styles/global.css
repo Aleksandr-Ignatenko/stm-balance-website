@@ -116,28 +116,3 @@ main {
 .main-navigation a:hover {
   color: #024b86;
 }
-
-@media (max-width: 900px) {
-  .header-container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-    padding: 14px 20px;
-  }
-
-  .main-navigation {
-    width: 100%;
-    gap: 20px;
-    overflow-x: auto;
-    padding-bottom: 4px;
-    scrollbar-width: none;
-  }
-
-  .main-navigation::-webkit-scrollbar {
-    display: none;
-  }
-
-  .main-navigation a {
-    flex: 0 0 auto;
-  }
-}
