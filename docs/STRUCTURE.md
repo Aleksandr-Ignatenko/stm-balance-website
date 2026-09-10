@@ -19,6 +19,7 @@ stm-balance-website/
 │   └── styles/
 │       └── global.css
 │
+├── .gitignore
 ├── README.md
 ├── astro.config.mjs
 └── package.json
