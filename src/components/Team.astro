@@ -1,12 +1,25 @@
+---
+import { defaultLanguage, type Language } from '../i18n/languages';
+import { teamTranslations } from '../i18n/translations';
+
+const {
+  language = defaultLanguage
+} = Astro.props as {
+  language?: Language;
+};
+
+const team = teamTranslations[language];
+---
+
 <section class="team-section" id="equipo">
   <div class="team-container">
     <div class="team-content">
-      <p class="section-label">Equipo</p>
+      <p class="section-label">{team.label}</p>
 
-      <h2>Un equipo multidisciplinario detrás de STM Balance</h2>
+      <h2>{team.heading}</h2>
 
       <p class="section-description">
-        STM Balance es desarrollado por un equipo con experiencia en producto, desarrollo móvil, infraestructura, DevOps, diseño y calidad.
+        {team.description}
       </p>
     </div>
   </div>
