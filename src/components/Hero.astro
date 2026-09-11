@@ -1,16 +1,29 @@
+---
+import { defaultLanguage, type Language } from '../i18n/languages';
+import { heroTranslations } from '../i18n/translations';
+
+const {
+  language = defaultLanguage
+} = Astro.props as {
+  language?: Language;
+};
+
+const hero = heroTranslations[language];
+---
+
 <section class="hero">
   <div class="hero-container">
     <div class="hero-content">
-      <p class="hero-label">Movilidad urbana inteligente</p>
+      <p class="hero-label">{hero.label}</p>
 
       <h1>STM Balance</h1>
 
       <h2>
-        Una plataforma digital unificada para la movilidad urbana.
+        {hero.heading}
       </h2>
 
       <p class="hero-description">
-        Transporte, rutas, tarjeta STM y servicios en una sola aplicación.
+        {hero.description}
       </p>
     </div>
   </div>
