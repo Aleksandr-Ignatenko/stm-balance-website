@@ -22,6 +22,12 @@ type ProductTranslations = {
   description: string;
 };
 
+type TechnologyTranslations = {
+  label: string;
+  heading: string;
+  description: string;
+};
+
 export const navigationTranslations: Record<Language, NavigationTranslations> = {
   es: {
     home: 'Inicio',
@@ -157,5 +163,43 @@ export const productTranslations: Record<Language, ProductTranslations> = {
     label: 'Produkt',
     heading: 'Alles rund um STM in einer einzigen App',
     description: 'STM Balance vereint die wichtigsten Funktionen für Mobilität und die Verwaltung der STM-Karte in einer einheitlichen digitalen Anwendung.',
+  },
+};
+
+export const technologyTranslations: Record<Language, TechnologyTranslations> = {
+  es: {
+    label: 'Tecnología',
+    heading: 'Tecnología preparada para la movilidad urbana',
+    description: 'STM Balance combina tecnologías móviles, geolocalización, datos en tiempo real y NFC para construir una experiencia de transporte moderna y unificada.',
+  },
+
+  pt: {
+    label: 'Tecnologia',
+    heading: 'Tecnologia preparada para a mobilidade urbana',
+    description: 'STM Balance combina tecnologias móveis, geolocalização, dados em tempo real e NFC para construir uma experiência de transporte moderna e unificada.',
+  },
+
+  en: {
+    label: 'Technology',
+    heading: 'Technology built for urban mobility',
+    description: 'STM Balance combines mobile technologies, geolocation, real-time data and NFC to create a modern and unified transport experience.',
+  },
+
+  ru: {
+    label: 'Технологии',
+    heading: 'Технологии для современной городской мобильности',
+    description: 'STM Balance объединяет мобильные технологии, геолокацию, данные в реальном времени и NFC для создания современной единой транспортной среды.',
+  },
+
+  fr: {
+    label: 'Technologie',
+    heading: 'Une technologie conçue pour la mobilité urbaine',
+    description: 'STM Balance combine les technologies mobiles, la géolocalisation, les données en temps réel et le NFC pour créer une expérience de transport moderne et unifiée.',
+  },
+
+  de: {
+    label: 'Technologie',
+    heading: 'Technologie für moderne urbane Mobilität',
+    description: 'STM Balance verbindet mobile Technologien, Geolokalisierung, Echtzeitdaten und NFC zu einem modernen und einheitlichen Mobilitätserlebnis.',
   },
 };
