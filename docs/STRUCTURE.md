@@ -14,6 +14,7 @@ stm-balance-website/
 ├── src/
 │   ├── components/
 │   │   ├── Company.astro
+│   │   ├── Contact.astro
 │   │   ├── Footer.astro
 │   │   ├── Header.astro
 │   │   ├── Hero.astro
