@@ -1,17 +1,23 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { defaultLanguage, type Language } from '../i18n/languages';
 import '../styles/global.css';
 import '../styles/mobile.css';
 
 const {
   title = 'STM Balance',
-  description = 'Sitio web oficial de STM Balance.'
-} = Astro.props;
+  description = 'Sitio web oficial de STM Balance.',
+  language = defaultLanguage
+} = Astro.props as {
+  title?: string;
+  description?: string;
+  language?: Language;
+};
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={language}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,9 +26,9 @@ const {
     <meta name="description" content={description} />
   </head>
 
-<body>
-  <Header />
-  <slot />
-  <Footer />
-</body>
+  <body>
+    <Header language={language} />
+    <slot />
+    <Footer />
+  </body>
 </html>
