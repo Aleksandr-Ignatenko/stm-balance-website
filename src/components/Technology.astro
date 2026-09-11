@@ -1,12 +1,25 @@
+---
+import { defaultLanguage, type Language } from '../i18n/languages';
+import { technologyTranslations } from '../i18n/translations';
+
+const {
+  language = defaultLanguage
+} = Astro.props as {
+  language?: Language;
+};
+
+const technology = technologyTranslations[language];
+---
+
 <section class="technology-section" id="tecnologia">
   <div class="technology-container">
     <div class="technology-content">
-      <p class="section-label">Tecnología</p>
+      <p class="section-label">{technology.label}</p>
 
-      <h2>Tecnología preparada para la movilidad urbana</h2>
+      <h2>{technology.heading}</h2>
 
       <p class="section-description">
-        STM Balance combina tecnologías móviles, geolocalización, datos en tiempo real y NFC para construir una experiencia de transporte moderna y unificada.
+        {technology.description}
       </p>
     </div>
   </div>
