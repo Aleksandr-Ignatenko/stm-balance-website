@@ -1,12 +1,25 @@
+---
+import { defaultLanguage, type Language } from '../i18n/languages';
+import { productTranslations } from '../i18n/translations';
+
+const {
+  language = defaultLanguage
+} = Astro.props as {
+  language?: Language;
+};
+
+const product = productTranslations[language];
+---
+
 <section class="product-section" id="producto">
   <div class="product-container">
     <div class="product-content">
-      <p class="section-label">Producto</p>
+      <p class="section-label">{product.label}</p>
 
-      <h2>Todo STM en una sola aplicación</h2>
+      <h2>{product.heading}</h2>
 
       <p class="section-description">
-        STM Balance reúne las funciones esenciales de movilidad y gestión de la tarjeta STM en una experiencia digital unificada.
+        {product.description}
       </p>
     </div>
   </div>
