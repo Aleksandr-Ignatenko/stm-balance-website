@@ -21,6 +21,8 @@ stm-balance-website/
 │   │   ├── Product.astro
 │   │   ├── Team.astro
 │   │   └── Technology.astro
+│   ├── i18n/
+│   │   └── languages.ts
 │   ├── layouts/
 │   │   └── BaseLayout.astro
 │   ├── pages/
