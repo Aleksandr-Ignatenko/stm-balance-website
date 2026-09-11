@@ -23,7 +23,8 @@ stm-balance-website/
 │   │   ├── Team.astro
 │   │   └── Technology.astro
 │   ├── i18n/
-│   │   └── languages.ts
+│   │   ├── languages.ts
+│   │   └── translations.ts
 │   ├── layouts/
 │   │   └── BaseLayout.astro
 │   ├── pages/
