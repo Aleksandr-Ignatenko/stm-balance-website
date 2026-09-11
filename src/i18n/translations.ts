@@ -10,64 +10,46 @@ type NavigationTranslations = {
   contact: string;
 };
 
-export const navigationTranslations: Record<Language, NavigationTranslations> = {
+type HeroTranslations = {
+  label: string;
+  heading: string;
+  description: string;
+};
+
+export const heroTranslations: Record<Language, HeroTranslations> = {
   es: {
-    home: 'Inicio',
-    product: 'Producto',
-    technology: 'Tecnología',
-    institutions: 'Instituciones',
-    team: 'Equipo',
-    company: 'Empresa',
-    contact: 'Contacto',
+    label: 'Movilidad urbana inteligente',
+    heading: 'Una plataforma digital unificada para la movilidad urbana.',
+    description: 'Transporte, rutas, tarjeta STM y servicios en una sola aplicación.',
   },
 
   pt: {
-    home: 'Início',
-    product: 'Produto',
-    technology: 'Tecnologia',
-    institutions: 'Instituições',
-    team: 'Equipe',
-    company: 'Empresa',
-    contact: 'Contato',
+    label: 'Mobilidade urbana inteligente',
+    heading: 'Uma plataforma digital unificada para a mobilidade urbana.',
+    description: 'Transporte, rotas, cartão STM e serviços em um só aplicativo.',
   },
 
   en: {
-    home: 'Home',
-    product: 'Product',
-    technology: 'Technology',
-    institutions: 'Institutions',
-    team: 'Team',
-    company: 'Company',
-    contact: 'Contact',
+    label: 'Smart urban mobility',
+    heading: 'A unified digital platform for urban mobility.',
+    description: 'Transport, routes, STM card and services in one app.',
   },
 
   ru: {
-    home: 'Главная',
-    product: 'Продукт',
-    technology: 'Технологии',
-    institutions: 'Организации',
-    team: 'Команда',
-    company: 'Компания',
-    contact: 'Контакты',
+    label: 'Умная городская мобильность',
+    heading: 'Единая цифровая платформа для городской мобильности.',
+    description: 'Транспорт, маршруты, карта STM и сервисы — в одном приложении.',
   },
 
   fr: {
-    home: 'Accueil',
-    product: 'Produit',
-    technology: 'Technologie',
-    institutions: 'Institutions',
-    team: 'Équipe',
-    company: 'Entreprise',
-    contact: 'Contact',
+    label: 'Mobilité urbaine intelligente',
+    heading: 'Une plateforme numérique unifiée pour la mobilité urbaine.',
+    description: 'Transports, itinéraires, carte STM et services dans une seule application.',
   },
 
   de: {
-    home: 'Startseite',
-    product: 'Produkt',
-    technology: 'Technologie',
-    institutions: 'Institutionen',
-    team: 'Team',
-    company: 'Unternehmen',
-    contact: 'Kontakt',
+    label: 'Intelligente urbane Mobilität',
+    heading: 'Eine einheitliche digitale Plattform für urbane Mobilität.',
+    description: 'Verkehr, Routen, STM-Karte und Services in einer einzigen App.',
   },
 };
