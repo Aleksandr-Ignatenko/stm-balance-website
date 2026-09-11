@@ -28,6 +28,12 @@ type TechnologyTranslations = {
   description: string;
 };
 
+type InstitutionsTranslations = {
+  label: string;
+  heading: string;
+  description: string;
+};
+
 export const navigationTranslations: Record<Language, NavigationTranslations> = {
   es: {
     home: 'Inicio',
@@ -201,5 +207,43 @@ export const technologyTranslations: Record<Language, TechnologyTranslations> = 
     label: 'Technologie',
     heading: 'Technologie für moderne urbane Mobilität',
     description: 'STM Balance verbindet mobile Technologien, Geolokalisierung, Echtzeitdaten und NFC zu einem modernen und einheitlichen Mobilitätserlebnis.',
+  },
+};
+
+export const institutionsTranslations: Record<Language, InstitutionsTranslations> = {
+  es: {
+    label: 'Instituciones',
+    heading: 'Colaboración para desarrollar la movilidad del futuro',
+    description: 'STM Balance busca colaborar con instituciones públicas, operadores de transporte y organizaciones del ecosistema de movilidad para impulsar nuevas soluciones digitales para los usuarios.',
+  },
+
+  pt: {
+    label: 'Instituições',
+    heading: 'Colaboração para desenvolver a mobilidade do futuro',
+    description: 'STM Balance busca colaborar com instituições públicas, operadores de transporte e organizações do ecossistema de mobilidade para impulsionar novas soluções digitais para os usuários.',
+  },
+
+  en: {
+    label: 'Institutions',
+    heading: 'Collaboration to build the mobility of the future',
+    description: 'STM Balance seeks to collaborate with public institutions, transport operators and mobility ecosystem organizations to develop new digital solutions for users.',
+  },
+
+  ru: {
+    label: 'Организации',
+    heading: 'Сотрудничество для развития мобильности будущего',
+    description: 'STM Balance стремится сотрудничать с государственными учреждениями, транспортными операторами и организациями экосистемы городской мобильности для развития новых цифровых решений для пользователей.',
+  },
+
+  fr: {
+    label: 'Institutions',
+    heading: 'Collaborer pour développer la mobilité de demain',
+    description: 'STM Balance souhaite collaborer avec les institutions publiques, les opérateurs de transport et les organisations de l’écosystème de la mobilité afin de développer de nouvelles solutions numériques pour les utilisateurs.',
+  },
+
+  de: {
+    label: 'Institutionen',
+    heading: 'Gemeinsam die Mobilität der Zukunft entwickeln',
+    description: 'STM Balance möchte mit öffentlichen Institutionen, Verkehrsunternehmen und Organisationen des Mobilitätsökosystems zusammenarbeiten, um neue digitale Lösungen für die Nutzer zu entwickeln.',
   },
 };
