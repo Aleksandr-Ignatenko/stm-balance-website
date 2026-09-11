@@ -1,12 +1,25 @@
+---
+import { defaultLanguage, type Language } from '../i18n/languages';
+import { institutionsTranslations } from '../i18n/translations';
+
+const {
+  language = defaultLanguage
+} = Astro.props as {
+  language?: Language;
+};
+
+const institutions = institutionsTranslations[language];
+---
+
 <section class="institutions-section" id="instituciones">
   <div class="institutions-container">
     <div class="institutions-content">
-      <p class="section-label">Instituciones</p>
+      <p class="section-label">{institutions.label}</p>
 
-      <h2>Colaboración para desarrollar la movilidad del futuro</h2>
+      <h2>{institutions.heading}</h2>
 
       <p class="section-description">
-        STM Balance busca colaborar con instituciones públicas, operadores de transporte y organizaciones del ecosistema de movilidad para impulsar nuevas soluciones digitales para los usuarios.
+        {institutions.description}
       </p>
     </div>
   </div>
