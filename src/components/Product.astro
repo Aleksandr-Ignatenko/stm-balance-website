@@ -22,5 +22,23 @@ const product = productTranslations[language];
         {product.description}
       </p>
     </div>
+
+    <div class="product-features">
+      {product.features.map((feature) => (
+        <article class="product-feature">
+          <p class={`product-feature-status product-feature-status--${feature.status}`}>
+            {feature.status === 'implemented'
+              ? product.implementedStatus
+              : product.developmentStatus}
+          </p>
+
+          <h3>{feature.title}</h3>
+
+          <p class="product-feature-description">
+            {feature.description}
+          </p>
+        </article>
+      ))}
+    </div>
   </div>
 </section>
