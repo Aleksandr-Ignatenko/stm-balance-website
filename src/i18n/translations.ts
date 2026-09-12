@@ -16,10 +16,19 @@ type HeroTranslations = {
   description: string;
 };
 
+type ProductFeature = {
+  title: string;
+  description: string;
+  status: 'implemented' | 'development';
+};
+
 type ProductTranslations = {
   label: string;
   heading: string;
   description: string;
+  implementedStatus: string;
+  developmentStatus: string;
+  features: ProductFeature[];
 };
 
 type TechnologyTranslations = {
