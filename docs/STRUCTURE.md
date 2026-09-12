@@ -18,6 +18,7 @@ stm-balance-website/
 │   │   ├── Footer.astro
 │   │   ├── Header.astro
 │   │   ├── Hero.astro
+│   │   ├── HomePage.astro
 │   │   ├── Institutions.astro
 │   │   ├── Product.astro
 │   │   ├── Team.astro
