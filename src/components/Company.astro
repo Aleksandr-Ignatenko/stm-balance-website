@@ -22,5 +22,17 @@ const company = companyTranslations[language];
         {company.description}
       </p>
     </div>
+
+    <div class="company-details">
+      {company.details.map((item) => (
+        <article class="company-detail">
+          <h3>{item.title}</h3>
+
+          <p>
+            {item.description}
+          </p>
+        </article>
+      ))}
+    </div>
   </div>
 </section>
