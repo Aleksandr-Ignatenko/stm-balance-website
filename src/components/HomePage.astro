@@ -1,0 +1,26 @@
+---
+import Hero from './Hero.astro';
+import Product from './Product.astro';
+import Technology from './Technology.astro';
+import Institutions from './Institutions.astro';
+import Team from './Team.astro';
+import Company from './Company.astro';
+import Contact from './Contact.astro';
+import { defaultLanguage, type Language } from '../i18n/languages';
+
+const {
+  language = defaultLanguage
+} = Astro.props as {
+  language?: Language;
+};
+---
+
+<main>
+  <Hero language={language} />
+  <Product language={language} />
+  <Technology language={language} />
+  <Institutions language={language} />
+  <Team language={language} />
+  <Company language={language} />
+  <Contact language={language} />
+</main>
