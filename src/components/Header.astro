@@ -1,5 +1,5 @@
 ---
-import { defaultLanguage, type Language } from '../i18n/languages';
+import { languages, defaultLanguage, type Language } from '../i18n/languages';
 import { navigationTranslations } from '../i18n/translations';
 
 const {
@@ -10,16 +10,17 @@ const {
 
 const navigation = navigationTranslations[language];
 const baseUrl = import.meta.env.BASE_URL;
+const languageHomeUrl = `${baseUrl}${language}/`;
 ---
 
 <header class="site-header">
   <div class="header-container">
-    <a class="brand" href={baseUrl}>
+    <a class="brand" href={languageHomeUrl}>
       STM Balance
     </a>
 
     <nav class="main-navigation" aria-label="Navegación principal">
-      <a href={baseUrl}>{navigation.home}</a>
+      <a href={languageHomeUrl}>{navigation.home}</a>
       <a href="#producto">{navigation.product}</a>
       <a href="#tecnologia">{navigation.technology}</a>
       <a href="#instituciones">{navigation.institutions}</a>
@@ -27,5 +28,21 @@ const baseUrl = import.meta.env.BASE_URL;
       <a href="#empresa">{navigation.company}</a>
       <a href="#contacto">{navigation.contact}</a>
     </nav>
+    <div class="language-switcher">
+      <details>
+        <summary>{languages[language]}</summary>
+
+        <div class="language-menu">
+          {Object.entries(languages).map(([code, label]) => (
+            <a
+              href={`${baseUrl}${code}/`}
+              aria-current={code === language ? 'page' : undefined}
+            >
+              {label}
+            </a>
+          ))}
+        </div>
+      </details>
+    </div>
   </div>
 </header>
