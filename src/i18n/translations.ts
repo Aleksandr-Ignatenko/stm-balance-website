@@ -40,6 +40,12 @@ type TeamTranslations = {
   description: string;
 };
 
+type CompanyTranslations = {
+  label: string;
+  heading: string;
+  description: string;
+};
+
 export const navigationTranslations: Record<Language, NavigationTranslations> = {
   es: {
     home: 'Inicio',
@@ -289,5 +295,43 @@ export const teamTranslations: Record<Language, TeamTranslations> = {
     label: 'Team',
     heading: 'Ein multidisziplinäres Team hinter STM Balance',
     description: 'STM Balance wird von einem Team mit Erfahrung in Produktentwicklung, mobiler Entwicklung, Infrastruktur, DevOps, Design und Qualität entwickelt.',
+  },
+};
+
+export const companyTranslations: Record<Language, CompanyTranslations> = {
+  es: {
+    label: 'Empresa',
+    heading: 'Platforma SAS',
+    description: 'STM Balance es un producto desarrollado por Platforma SAS, una empresa uruguaya de tecnología enfocada en soluciones digitales y movilidad urbana.',
+  },
+
+  pt: {
+    label: 'Empresa',
+    heading: 'Platforma SAS',
+    description: 'STM Balance é um produto desenvolvido pela Platforma SAS, uma empresa uruguaia de tecnologia focada em soluções digitais e mobilidade urbana.',
+  },
+
+  en: {
+    label: 'Company',
+    heading: 'Platforma SAS',
+    description: 'STM Balance is a product developed by Platforma SAS, a Uruguayan technology company focused on digital solutions and urban mobility.',
+  },
+
+  ru: {
+    label: 'Компания',
+    heading: 'Platforma SAS',
+    description: 'STM Balance — продукт компании Platforma SAS, уругвайской технологической компании, специализирующейся на цифровых решениях и городской мобильности.',
+  },
+
+  fr: {
+    label: 'Entreprise',
+    heading: 'Platforma SAS',
+    description: 'STM Balance est un produit développé par Platforma SAS, une entreprise technologique uruguayenne spécialisée dans les solutions numériques et la mobilité urbaine.',
+  },
+
+  de: {
+    label: 'Unternehmen',
+    heading: 'Platforma SAS',
+    description: 'STM Balance ist ein Produkt von Platforma SAS, einem uruguayischen Technologieunternehmen mit Schwerpunkt auf digitalen Lösungen und urbaner Mobilität.',
   },
 };
