@@ -1,7 +1,20 @@
+---
+import { defaultLanguage, type Language } from '../i18n/languages';
+import { footerTranslations } from '../i18n/translations';
+
+const {
+  language = defaultLanguage
+} = Astro.props as {
+  language?: Language;
+};
+
+const footer = footerTranslations[language];
+---
+
 <footer class="site-footer">
   <div class="footer-container">
     <p>STM Balance</p>
-    <p>Desarrollado por Platforma SAS</p>
-    <p>Montevideo — 2026</p>
+    <p>{footer.developedBy}</p>
+    <p>{footer.location}</p>
   </div>
 </footer>
