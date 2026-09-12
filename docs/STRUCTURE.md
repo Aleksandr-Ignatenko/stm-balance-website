@@ -29,11 +29,13 @@ stm-balance-website/
 │   ├── layouts/
 │   │   └── BaseLayout.astro
 │   ├── pages/
-│   │   ├── eт/
+│   │   ├── en/
 │   │   │   └── index.astro
 │   │   ├── es/
 │   │   │   └── index.astro
 │   │   ├── pt/
+│   │   │   └── index.astro
+│   │   ├── ru/
 │   │   │   └── index.astro
 │   │   └── index.astro
 │   └── styles/
