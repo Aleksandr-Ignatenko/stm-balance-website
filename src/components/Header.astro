@@ -32,6 +32,7 @@ const languageHomeUrl = `${baseUrl}${language}/`;
       <a href="#empresa">{navigation.company}</a>
       <a href="#contacto">{navigation.contact}</a>
     </nav>
+
     <div class="language-switcher">
       <details>
         <summary>{languages[language]}</summary>
@@ -48,5 +49,44 @@ const languageHomeUrl = `${baseUrl}${language}/`;
         </div>
       </details>
     </div>
+
+    <details class="mobile-menu">
+      <summary class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </summary>
+
+      <div class="mobile-menu-panel">
+        <nav class="mobile-navigation" aria-label="Navegación principal">
+          <a href={languageHomeUrl}>{navigation.home}</a>
+          <a href="#producto">{navigation.product}</a>
+          <a href="#tecnologia">{navigation.technology}</a>
+          <a href="#instituciones">{navigation.institutions}</a>
+          <a href="#equipo">{navigation.team}</a>
+          <a href="#empresa">{navigation.company}</a>
+          <a href="#contacto">{navigation.contact}</a>
+        </nav>
+
+        <div class="mobile-language-menu">
+          {Object.entries(languages).map(([code, label]) => (
+            <a
+              href={`${baseUrl}${code}/`}
+              aria-current={code === language ? 'page' : undefined}
+            >
+              {label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </details>
   </div>
 </header>
+
+<script>
+  document.querySelectorAll('.mobile-menu a').forEach((link) => {
+    link.addEventListener('click', () => {
+      link.closest('details')?.removeAttribute('open');
+    });
+  });
+</script>
