@@ -52,6 +52,11 @@ type ContactTranslations = {
   description: string;
 };
 
+type FooterTranslations = {
+  developedBy: string;
+  location: string;
+};
+
 export const navigationTranslations: Record<Language, NavigationTranslations> = {
   es: {
     home: 'Inicio',
@@ -377,5 +382,37 @@ export const contactTranslations: Record<Language, ContactTranslations> = {
     label: 'Kontakt',
     heading: 'Sprechen wir über STM Balance',
     description: 'Für institutionelle Anfragen, Kooperationen und Entwicklungsmöglichkeiten können Sie das STM-Balance-Team kontaktieren.',
+  },
+};
+
+export const footerTranslations: Record<Language, FooterTranslations> = {
+  es: {
+    developedBy: 'Desarrollado por Platforma SAS',
+    location: 'Montevideo — 2026',
+  },
+
+  pt: {
+    developedBy: 'Desenvolvido pela Platforma SAS',
+    location: 'Montevidéu — 2026',
+  },
+
+  en: {
+    developedBy: 'Developed by Platforma SAS',
+    location: 'Montevideo — 2026',
+  },
+
+  ru: {
+    developedBy: 'Разработано Platforma SAS',
+    location: 'Монтевидео — 2026',
+  },
+
+  fr: {
+    developedBy: 'Développé par Platforma SAS',
+    location: 'Montevideo — 2026',
+  },
+
+  de: {
+    developedBy: 'Entwickelt von Platforma SAS',
+    location: 'Montevideo — 2026',
   },
 };
