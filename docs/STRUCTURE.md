@@ -29,6 +29,8 @@ stm-balance-website/
 │   ├── layouts/
 │   │   └── BaseLayout.astro
 │   ├── pages/
+│   │   ├── de/
+│   │   │   └── index.astro
 │   │   ├── en/
 │   │   │   └── index.astro
 │   │   ├── es/
