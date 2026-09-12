@@ -31,6 +31,8 @@ stm-balance-website/
 │   ├── pages/
 │   │   ├── es/
 │   │   │   └── index.astro
+│   │   ├── pt/
+│   │   │   └── index.astro
 │   │   └── index.astro
 │   └── styles/
 │       ├── global.css
