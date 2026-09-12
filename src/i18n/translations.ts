@@ -73,10 +73,16 @@ type CompanyTranslations = {
   details: CompanyItem[];
 };
 
+type ContactItem = {
+  title: string;
+  description: string;
+};
+
 type ContactTranslations = {
   label: string;
   heading: string;
   description: string;
+  channels: ContactItem[];
 };
 
 type FooterTranslations = {
