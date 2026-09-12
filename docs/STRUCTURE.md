@@ -33,6 +33,8 @@ stm-balance-website/
 │   │   │   └── index.astro
 │   │   ├── es/
 │   │   │   └── index.astro
+│   │   ├── fr/
+│   │   │   └── index.astro
 │   │   ├── pt/
 │   │   │   └── index.astro
 │   │   ├── ru/
