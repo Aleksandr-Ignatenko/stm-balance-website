@@ -22,5 +22,17 @@ const contact = contactTranslations[language];
         {contact.description}
       </p>
     </div>
+
+    <div class="contact-channels">
+      {contact.channels.map((item) => (
+        <article class="contact-channel">
+          <h3>{item.title}</h3>
+
+          <p>
+            {item.description}
+          </p>
+        </article>
+      ))}
+    </div>
   </div>
 </section>
