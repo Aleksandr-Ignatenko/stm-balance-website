@@ -1,12 +1,25 @@
+---
+import { defaultLanguage, type Language } from '../i18n/languages';
+import { companyTranslations } from '../i18n/translations';
+
+const {
+  language = defaultLanguage
+} = Astro.props as {
+  language?: Language;
+};
+
+const company = companyTranslations[language];
+---
+
 <section class="company-section" id="empresa">
   <div class="company-container">
     <div class="company-content">
-      <p class="section-label">Empresa</p>
+      <p class="section-label">{company.label}</p>
 
-      <h2>Platforma SAS</h2>
+      <h2>{company.heading}</h2>
 
       <p class="section-description">
-        STM Balance es un producto desarrollado por Platforma SAS, una empresa uruguaya de tecnología enfocada en soluciones digitales y movilidad urbana.
+        {company.description}
       </p>
     </div>
   </div>
