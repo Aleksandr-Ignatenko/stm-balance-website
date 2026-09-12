@@ -61,10 +61,16 @@ type TeamTranslations = {
   description: string;
 };
 
+type CompanyItem = {
+  title: string;
+  description: string;
+};
+
 type CompanyTranslations = {
   label: string;
   heading: string;
   description: string;
+  details: CompanyItem[];
 };
 
 type ContactTranslations = {
