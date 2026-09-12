@@ -408,36 +408,6 @@ export const productTranslations: Record<Language, ProductTranslations> = {
   },
 };
 
-  pt: {
-    label: 'Produto',
-    heading: 'Tudo do STM em um só aplicativo',
-    description: 'STM Balance reúne as funções essenciais de mobilidade e gestão do cartão STM em uma experiência digital unificada.',
-  },
-
-  en: {
-    label: 'Product',
-    heading: 'Everything STM in one app',
-    description: 'STM Balance brings together essential mobility and STM card management features in one unified digital experience.',
-  },
-
-  ru: {
-    label: 'Продукт',
-    heading: 'Всё STM в одном приложении',
-    description: 'STM Balance объединяет основные функции городской мобильности и управления картой STM в едином цифровом интерфейсе.',
-  },
-
-  fr: {
-    label: 'Produit',
-    heading: 'Tout STM dans une seule application',
-    description: 'STM Balance réunit les fonctions essentielles de mobilité et de gestion de la carte STM dans une expérience numérique unifiée.',
-  },
-
-  de: {
-    label: 'Produkt',
-    heading: 'Alles rund um STM in einer einzigen App',
-    description: 'STM Balance vereint die wichtigsten Funktionen für Mobilität und die Verwaltung der STM-Karte in einer einheitlichen digitalen Anwendung.',
-  },
-};
 
 export const technologyTranslations: Record<Language, TechnologyTranslations> = {
   es: {
