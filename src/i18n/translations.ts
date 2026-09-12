@@ -31,10 +31,16 @@ type ProductTranslations = {
   features: ProductFeature[];
 };
 
+type TechnologyItem = {
+  title: string;
+  description: string;
+};
+
 type TechnologyTranslations = {
   label: string;
   heading: string;
   description: string;
+  technologies: TechnologyItem[];
 };
 
 type InstitutionsTranslations = {
