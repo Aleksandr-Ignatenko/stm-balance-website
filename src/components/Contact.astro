@@ -1,12 +1,25 @@
+---
+import { defaultLanguage, type Language } from '../i18n/languages';
+import { contactTranslations } from '../i18n/translations';
+
+const {
+  language = defaultLanguage
+} = Astro.props as {
+  language?: Language;
+};
+
+const contact = contactTranslations[language];
+---
+
 <section class="contact-section" id="contacto">
   <div class="contact-container">
     <div class="contact-content">
-      <p class="section-label">Contacto</p>
+      <p class="section-label">{contact.label}</p>
 
-      <h2>Hablemos sobre STM Balance</h2>
+      <h2>{contact.heading}</h2>
 
       <p class="section-description">
-        Para consultas institucionales, colaboraciones y oportunidades de desarrollo, puede comunicarse con el equipo de STM Balance.
+        {contact.description}
       </p>
     </div>
   </div>
