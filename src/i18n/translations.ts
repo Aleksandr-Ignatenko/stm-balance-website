@@ -46,6 +46,12 @@ type CompanyTranslations = {
   description: string;
 };
 
+type ContactTranslations = {
+  label: string;
+  heading: string;
+  description: string;
+};
+
 export const navigationTranslations: Record<Language, NavigationTranslations> = {
   es: {
     home: 'Inicio',
@@ -333,5 +339,43 @@ export const companyTranslations: Record<Language, CompanyTranslations> = {
     label: 'Unternehmen',
     heading: 'Platforma SAS',
     description: 'STM Balance ist ein Produkt von Platforma SAS, einem uruguayischen Technologieunternehmen mit Schwerpunkt auf digitalen Lösungen und urbaner Mobilität.',
+  },
+};
+
+export const contactTranslations: Record<Language, ContactTranslations> = {
+  es: {
+    label: 'Contacto',
+    heading: 'Hablemos sobre STM Balance',
+    description: 'Para consultas institucionales, colaboraciones y oportunidades de desarrollo, puede comunicarse con el equipo de STM Balance.',
+  },
+
+  pt: {
+    label: 'Contato',
+    heading: 'Vamos conversar sobre o STM Balance',
+    description: 'Para consultas institucionais, colaborações e oportunidades de desenvolvimento, entre em contato com a equipe do STM Balance.',
+  },
+
+  en: {
+    label: 'Contact',
+    heading: 'Let’s talk about STM Balance',
+    description: 'For institutional inquiries, collaborations and development opportunities, you can contact the STM Balance team.',
+  },
+
+  ru: {
+    label: 'Контакты',
+    heading: 'Давайте поговорим о STM Balance',
+    description: 'По вопросам институционального сотрудничества, партнёрства и возможностей развития можно связаться с командой STM Balance.',
+  },
+
+  fr: {
+    label: 'Contact',
+    heading: 'Parlons de STM Balance',
+    description: 'Pour les demandes institutionnelles, les collaborations et les opportunités de développement, vous pouvez contacter l’équipe de STM Balance.',
+  },
+
+  de: {
+    label: 'Kontakt',
+    heading: 'Sprechen wir über STM Balance',
+    description: 'Für institutionelle Anfragen, Kooperationen und Entwicklungsmöglichkeiten können Sie das STM-Balance-Team kontaktieren.',
   },
 };
