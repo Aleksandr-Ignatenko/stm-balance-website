@@ -98,6 +98,12 @@ const structuredData = {
     <meta name="twitter:image" content={socialImageUrl} />
     <meta name="twitter:image:alt" content="STM Balance" />
 
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify(structuredData)}
+    ></script>
+
     <link rel="canonical" href={canonicalUrl} />
 
     {alternateLanguages.map(({ code, url }) => (
