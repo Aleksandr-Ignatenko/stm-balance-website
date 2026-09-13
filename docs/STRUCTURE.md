@@ -12,12 +12,7 @@ stm-balance-website/
 ├── public/
 │   ├── images/
 │   │   ├── hero/
-│   │   │   ├── stm-balance-mockup-de.jpg
-│   │   │   ├── stm-balance-mockup-en.jpg
-│   │   │   ├── stm-balance-mockup-es.jpg
-│   │   │   ├── stm-balance-mockup-fr.jpg
-│   │   │   ├── stm-balance-mockup-pt.jpg
-│   │   │   └── stm-balance-mockup-ru.jpg
+│   │   │   └── stm-balance-mockup.png
 │   │   └── social/
 │   │       └── stm-balance-social.jpg
 │   ├── apple-touch-icon.png
