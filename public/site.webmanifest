@@ -1,0 +1,16 @@
+{
+  "name": "STM Balance",
+  "short_name": "STM Balance",
+  "description": "Plataforma digital para movilidad urbana y servicios STM.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#024B86",
+  "icons": [
+    {
+      "src": "./apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
