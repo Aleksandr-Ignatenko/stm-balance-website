@@ -14,7 +14,11 @@ stm-balance-website/
 │   │   ├── hero/
 │   │   │   └── stm-balance-mockup.png
 │   │   └── social/
-│   │       └── stm-balance-social.jpg
+│   │       ├── email.svg
+│   │       ├── linkedin.svg
+│   │       ├── stm-balance-social.jpg
+│   │       ├── telegram.svg
+│   │       └── x.svg
 │   ├── apple-touch-icon.png
 │   ├── favicon.ico
 │   ├── robots.txt
