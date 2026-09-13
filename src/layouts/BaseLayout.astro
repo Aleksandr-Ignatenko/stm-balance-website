@@ -41,6 +41,31 @@ const socialImageUrl = new URL(
 const faviconUrl = `${baseUrl}favicon.ico`;
 const appleTouchIconUrl = `${baseUrl}apple-touch-icon.png`;
 const manifestUrl = `${baseUrl}site.webmanifest`;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${defaultUrl}#organization`,
+      name: 'Platforma SAS',
+      url: defaultUrl,
+    },
+    {
+      '@type': 'SoftwareApplication',
+      '@id': `${canonicalUrl}#software`,
+      name: 'STM Balance',
+      url: canonicalUrl,
+      description,
+      applicationCategory: 'TravelApplication',
+      inLanguage: language,
+      image: socialImageUrl,
+      publisher: {
+        '@id': `${defaultUrl}#organization`,
+      },
+    },
+  ],
+};
 ---
 
 <!doctype html>
