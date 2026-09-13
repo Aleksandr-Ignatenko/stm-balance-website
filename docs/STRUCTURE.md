@@ -55,6 +55,7 @@ stm-balance-website/
 │   │   │   └── index.astro
 │   │   ├── ru/
 │   │   │   └── index.astro
+│   │   ├── 404.astro
 │   │   └── index.astro
 │   └── styles/
 │       ├── global.css
