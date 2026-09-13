@@ -22,7 +22,8 @@ stm-balance-website/
 │   │       └── stm-balance-social.jpg
 │   ├── apple-touch-icon.png
 │   ├── favicon.ico
-│   └── site.webmanifest
+│   ├── site.webmanifest
+│   └── sitemap.xml
 │
 ├── src/
 │   ├── components/
