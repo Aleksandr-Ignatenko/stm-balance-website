@@ -9,12 +9,52 @@ const {
 };
 
 const footer = footerTranslations[language];
+
+const baseUrl = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+
+const linkedinIconUrl = `${baseUrl}images/social/linkedin.svg`;
+const xIconUrl = `${baseUrl}images/social/x.svg`;
+const telegramIconUrl = `${baseUrl}images/social/telegram.svg`;
+const emailIconUrl = `${baseUrl}images/social/email.svg`;
 ---
 
 <footer class="site-footer">
   <div class="footer-container">
     <p>STM Balance</p>
     <p>{footer.developedBy}</p>
+
+    <div class="footer-social">
+      <img
+        src={linkedinIconUrl}
+        alt="LinkedIn"
+        width="32"
+        height="32"
+      />
+
+      <img
+        src={xIconUrl}
+        alt="X"
+        width="32"
+        height="32"
+      />
+
+      <img
+        src={telegramIconUrl}
+        alt="Telegram"
+        width="32"
+        height="32"
+      />
+
+      <img
+        src={emailIconUrl}
+        alt="Email"
+        width="32"
+        height="32"
+      />
+    </div>
+
     <p>{footer.location}</p>
   </div>
 </footer>
