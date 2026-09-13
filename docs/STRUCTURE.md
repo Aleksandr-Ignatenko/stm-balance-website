@@ -20,7 +20,7 @@ stm-balance-website/
 │   │   │   └── stm-balance-mockup-ru.jpg
 │   │   └── social/
 │   │       └── stm-balance-social.jpg
-│   ├── apple-touch-icon-download.png
+│   ├── apple-touch-icon.png
 │   └── favicon.ico
 │
 ├── src/
