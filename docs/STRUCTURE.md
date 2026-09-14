@@ -44,19 +44,23 @@ stm-balance-website/
 │   │   └── BaseLayout.astro
 │   ├── pages/
 │   │   ├── de/
-│   │   │   └── index.astro
+│   │   │   ├── index.astro
+│   │   │   └── privacy.astro
 │   │   ├── en/
-│   │   │   └── index.astro
+│   │   │   ├── index.astro
+│   │   │   └── privacy.astro
 │   │   ├── es/
 │   │   │   ├── index.astro
 │   │   │   └── privacy.astro
 │   │   ├── fr/
-│   │   │   └── index.astro
+│   │   │   ├── index.astro
+│   │   │   └── privacy.astro
 │   │   ├── pt/
 │   │   │   ├── index.astro
 │   │   │   └── privacy.astro
 │   │   ├── ru/
-│   │   │   └── index.astro
+│   │   │   ├── index.astro
+│   │   │   └── privacy.astro
 │   │   ├── 404.astro
 │   │   └── index.astro
 │   └── styles/
