@@ -18,6 +18,9 @@ const linkedinIconUrl = `${baseUrl}images/social/linkedin.svg`;
 const xIconUrl = `${baseUrl}images/social/x.svg`;
 const telegramIconUrl = `${baseUrl}images/social/telegram.svg`;
 const emailIconUrl = `${baseUrl}images/social/email.svg`;
+
+const privacyUrl = `${baseUrl}${language}/privacy/`;
+const termsUrl = `${baseUrl}${language}/terms/`;
 ---
 
 <footer class="site-footer">
@@ -53,6 +56,11 @@ const emailIconUrl = `${baseUrl}images/social/email.svg`;
         width="32"
         height="32"
       />
+    </div>
+
+    <div class="footer-legal">
+      <a href={privacyUrl}>{footer.privacy}</a>
+      <a href={termsUrl}>{footer.terms}</a>
     </div>
 
     <p>{footer.location}</p>
