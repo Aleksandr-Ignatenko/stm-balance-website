@@ -88,6 +88,8 @@ type ContactTranslations = {
 type FooterTranslations = {
   developedBy: string;
   location: string;
+  privacy: string;
+  terms: string;
 };
 
 export const navigationTranslations: Record<Language, NavigationTranslations> = {
