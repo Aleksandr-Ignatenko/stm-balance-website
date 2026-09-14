@@ -8,11 +8,15 @@ import '../styles/mobile.css';
 const {
   title = 'STM Balance',
   description = 'Sitio web oficial de STM Balance.',
-  language = defaultLanguage
+  language = defaultLanguage,
+  pagePath = '',
+  includeApplicationSchema = true
 } = Astro.props as {
   title?: string;
   description?: string;
   language?: Language;
+  pagePath?: string;
+  includeApplicationSchema?: boolean;
 };
 
 const baseUrl = import.meta.env.BASE_URL.endsWith('/')
@@ -21,17 +25,31 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 
 const siteUrl = Astro.site ?? new URL(Astro.url.origin);
 
+const normalizedPagePath = pagePath
+  ? `${pagePath.replace(/^\/+|\/+$/g, '')}/`
+  : '';
+
 const canonicalUrl = new URL(
-  `${baseUrl}${language}/`,
+  `${baseUrl}${language}/${normalizedPagePath}`,
   siteUrl
 ).toString();
 
 const alternateLanguages = Object.keys(languages).map((code) => ({
   code,
-  url: new URL(`${baseUrl}${code}/`, siteUrl).toString(),
+  url: new URL(
+    `${baseUrl}${code}/${normalizedPagePath}`,
+    siteUrl
+  ).toString(),
 }));
 
 const defaultUrl = new URL(baseUrl, siteUrl).toString();
+
+const defaultAlternateUrl = normalizedPagePath
+  ? new URL(
+      `${baseUrl}${defaultLanguage}/${normalizedPagePath}`,
+      siteUrl
+    ).toString()
+  : defaultUrl;
 
 const socialImageUrl = new URL(
   `${baseUrl}images/social/stm-balance-social.jpg`,
