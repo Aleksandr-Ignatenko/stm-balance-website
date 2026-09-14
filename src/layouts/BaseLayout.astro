@@ -69,20 +69,25 @@ const structuredData = {
       name: 'Platforma SAS',
       url: defaultUrl,
     },
-    {
-      '@type': 'SoftwareApplication',
-      '@id': `${canonicalUrl}#software`,
-      name: 'STM Balance',
-      url: canonicalUrl,
-      description,
-      applicationCategory: 'TravelApplication',
-      operatingSystem: 'Android',
-      inLanguage: language,
-      image: socialImageUrl,
-      publisher: {
-        '@id': `${defaultUrl}#organization`,
-      },
-    },
+
+    ...(includeApplicationSchema
+      ? [
+          {
+            '@type': 'SoftwareApplication',
+            '@id': `${canonicalUrl}#software`,
+            name: 'STM Balance',
+            url: canonicalUrl,
+            description,
+            applicationCategory: 'TravelApplication',
+            operatingSystem: 'Android',
+            inLanguage: language,
+            image: socialImageUrl,
+            publisher: {
+              '@id': `${defaultUrl}#organization`,
+            },
+          },
+        ]
+      : []),
   ],
 };
 ---
