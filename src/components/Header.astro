@@ -55,7 +55,7 @@ const getLanguageUrl = (code: string) =>
         <div class="language-menu">
           {Object.entries(languages).map(([code, label]) => (
             <a
-              href={`${baseUrl}${code}/`}
+              href={getLanguageUrl(code)}
               aria-current={code === language ? 'page' : undefined}
             >
               {label}
