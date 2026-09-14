@@ -48,7 +48,8 @@ stm-balance-website/
 │   │   ├── en/
 │   │   │   └── index.astro
 │   │   ├── es/
-│   │   │   └── index.astro
+│   │   │   ├── index.astro
+│   │   │   └── privacy.astro
 │   │   ├── fr/
 │   │   │   └── index.astro
 │   │   ├── pt/
