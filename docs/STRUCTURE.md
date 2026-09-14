@@ -45,22 +45,28 @@ stm-balance-website/
 │   ├── pages/
 │   │   ├── de/
 │   │   │   ├── index.astro
-│   │   │   └── privacy.astro
+│   │   │   ├── privacy.astro
+│   │   │   └── terms.astro
 │   │   ├── en/
 │   │   │   ├── index.astro
-│   │   │   └── privacy.astro
+│   │   │   ├── privacy.astro
+│   │   │   └── terms.astro
 │   │   ├── es/
 │   │   │   ├── index.astro
-│   │   │   └── privacy.astro
+│   │   │   ├── privacy.astro
+│   │   │   └── terms.astro
 │   │   ├── fr/
 │   │   │   ├── index.astro
-│   │   │   └── privacy.astro
+│   │   │   ├── privacy.astro
+│   │   │   └── terms.astro
 │   │   ├── pt/
 │   │   │   ├── index.astro
-│   │   │   └── privacy.astro
+│   │   │   ├── privacy.astro
+│   │   │   └── terms.astro
 │   │   ├── ru/
 │   │   │   ├── index.astro
-│   │   │   └── privacy.astro
+│   │   │   ├── privacy.astro
+│   │   │   └── terms.astro
 │   │   ├── 404.astro
 │   │   └── index.astro
 │   └── styles/
