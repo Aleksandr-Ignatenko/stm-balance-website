@@ -9,6 +9,12 @@ const {
 };
 
 const product = productTranslations[language];
+
+const baseUrl = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+
+const productMockupUrl = `${baseUrl}images/hero/stm-balance-mockup.png`;
 ---
 
 <section class="product-section" id="producto">
@@ -21,6 +27,17 @@ const product = productTranslations[language];
       <p class="section-description">
         {product.description}
       </p>
+    </div>
+
+    <div class="product-visual">
+      <img
+        class="product-mockup"
+        src={productMockupUrl}
+        alt="STM Balance"
+        width="401"
+        height="803"
+        loading="lazy"
+      />
     </div>
 
     <div class="product-features">
