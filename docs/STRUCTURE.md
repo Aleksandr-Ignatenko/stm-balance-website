@@ -12,6 +12,17 @@ stm-balance-website/
 ├── public/
 │   ├── images/
 │   │   ├── hero/
+│   │   │   └── slides/
+│   │   │       ├── stm-balance-hero-01.jpg
+│   │   │       ├── stm-balance-hero-02.jpg
+│   │   │       ├── stm-balance-hero-03.jpg
+│   │   │       ├── stm-balance-hero-04.jpg
+│   │   │       ├── stm-balance-hero-05.jpg
+│   │   │       ├── stm-balance-hero-06.jpg
+│   │   │       ├── stm-balance-hero-07.jpg
+│   │   │       ├── stm-balance-hero-08.jpg
+│   │   │       └── stm-balance-hero-09.jpg
+│   │   ├── product/
 │   │   │   └── stm-balance-mockup.png
 │   │   └── social/
 │   │       ├── email.svg
