@@ -5,131 +5,240 @@ type ContactItem = {
   description: string;
 };
 
+type ContactInfo = {
+  emailLabel: string;
+  emailValue: string;
+  locationLabel: string;
+  locationValue: string;
+};
+
+type ContactForm = {
+  nameLabel: string;
+  organizationLabel: string;
+  emailLabel: string;
+  subjectLabel: string;
+  messageLabel: string;
+  submitLabel: string;
+  unavailableMessage: string;
+};
+
 type ContactTranslations = {
   label: string;
   heading: string;
   description: string;
   channels: ContactItem[];
+  contactInfo: ContactInfo;
+  form: ContactForm;
 };
 
 export const contactTranslations: Record<Language, ContactTranslations> = {
   es: {
     label: 'Contacto',
-    heading: 'Hablemos sobre STM Balance',
-    description: 'STM Balance está abierto a la colaboración institucional, tecnológica y al desarrollo de nuevos proyectos.',
+    heading: 'Contacto y colaboración',
+    description: 'Estamos abiertos a colaborar con instituciones públicas, operadores de transporte, empresas tecnológicas y programas de inversión y aceleración. Contactanos si estás interesado en una alianza, integración, proyecto piloto o en el desarrollo de nuevas soluciones de movilidad urbana.',
     channels: [
       {
         title: 'Colaboración institucional',
-        description: 'Para instituciones públicas, organizaciones y operadores interesados en colaborar con STM Balance.',
+        description: 'Cooperación con instituciones públicas, organizaciones de transporte y operadores de movilidad urbana.',
       },
       {
         title: 'Integraciones tecnológicas',
-        description: 'Para empresas y socios tecnológicos interesados en integraciones, datos, infraestructura o nuevas funcionalidades.',
+        description: 'Colaboración con empresas tecnológicas en materia de datos, infraestructura, servicios e integraciones.',
       },
       {
-        title: 'Pilotos y desarrollo',
-        description: 'Para propuestas de proyectos piloto, pruebas en entornos reales y nuevas oportunidades de desarrollo.',
+        title: 'Proyectos piloto y alianzas',
+        description: 'Propuestas para lanzar proyectos piloto, probar soluciones de forma conjunta y desarrollar nuevas líneas de STM Balance.',
       },
     ],
+    contactInfo: {
+      emailLabel: 'Correo electrónico',
+      emailValue: 'Correo corporativo — próximamente',
+      locationLabel: 'Ubicación',
+      locationValue: 'Montevideo, Uruguay',
+    },
+    form: {
+      nameLabel: 'Nombre',
+      organizationLabel: 'Organización',
+      emailLabel: 'Correo electrónico',
+      subjectLabel: 'Asunto',
+      messageLabel: 'Mensaje',
+      submitLabel: 'Enviar mensaje',
+      unavailableMessage: 'El formulario de contacto estará disponible después del lanzamiento del sitio.',
+    },
   },
 
   pt: {
     label: 'Contato',
-    heading: 'Vamos conversar sobre o STM Balance',
-    description: 'STM Balance está aberto à colaboração institucional, tecnológica e ao desenvolvimento de novos projetos.',
+    heading: 'Contato e colaboração',
+    description: 'Estamos abertos à colaboração com instituições públicas, operadores de transporte, empresas de tecnologia e programas de investimento e aceleração. Entre em contato conosco se tiver interesse em parceria, integração, projeto-piloto ou no desenvolvimento de novas soluções de mobilidade urbana.',
     channels: [
       {
         title: 'Colaboração institucional',
-        description: 'Para instituições públicas, organizações e operadores interessados em colaborar com o STM Balance.',
+        description: 'Cooperação com instituições públicas, organizações de transporte e operadores de mobilidade urbana.',
       },
       {
         title: 'Integrações tecnológicas',
-        description: 'Para empresas e parceiros tecnológicos interessados em integrações, dados, infraestrutura ou novas funcionalidades.',
+        description: 'Colaboração com empresas de tecnologia em dados, infraestrutura, serviços e integrações.',
       },
       {
-        title: 'Pilotos e desenvolvimento',
-        description: 'Para propostas de projetos piloto, testes em ambientes reais e novas oportunidades de desenvolvimento.',
+        title: 'Projetos-piloto e parcerias',
+        description: 'Propostas para lançar projetos-piloto, testar soluções em conjunto e desenvolver novas áreas do STM Balance.',
       },
     ],
+    contactInfo: {
+      emailLabel: 'E-mail',
+      emailValue: 'E-mail corporativo — em breve',
+      locationLabel: 'Localização',
+      locationValue: 'Montevidéu, Uruguai',
+    },
+    form: {
+      nameLabel: 'Nome',
+      organizationLabel: 'Organização',
+      emailLabel: 'E-mail',
+      subjectLabel: 'Assunto',
+      messageLabel: 'Mensagem',
+      submitLabel: 'Enviar mensagem',
+      unavailableMessage: 'O formulário de contato estará disponível após o lançamento do site.',
+    },
   },
 
   en: {
     label: 'Contact',
-    heading: 'Let’s talk about STM Balance',
-    description: 'STM Balance is open to institutional and technology collaboration, as well as the development of new projects.',
+    heading: 'Contact and collaboration',
+    description: 'We are open to collaboration with public institutions, transport operators, technology companies, and investment and acceleration programs. Contact us if you are interested in a partnership, integration, pilot project, or the development of new urban mobility solutions.',
     channels: [
       {
         title: 'Institutional collaboration',
-        description: 'For public institutions, organizations and operators interested in collaborating with STM Balance.',
+        description: 'Cooperation with public institutions, transport organizations and urban mobility operators.',
       },
       {
         title: 'Technology integrations',
-        description: 'For companies and technology partners interested in integrations, data, infrastructure or new functionality.',
+        description: 'Collaboration with technology companies on data, infrastructure, services and integrations.',
       },
       {
-        title: 'Pilots and development',
-        description: 'For pilot project proposals, real-world testing and new development opportunities.',
+        title: 'Pilot projects and partnerships',
+        description: 'Proposals for launching pilot projects, jointly testing solutions and developing new areas of STM Balance.',
       },
     ],
+    contactInfo: {
+      emailLabel: 'Email',
+      emailValue: 'Corporate email — coming soon',
+      locationLabel: 'Location',
+      locationValue: 'Montevideo, Uruguay',
+    },
+    form: {
+      nameLabel: 'Name',
+      organizationLabel: 'Organization',
+      emailLabel: 'Email',
+      subjectLabel: 'Subject',
+      messageLabel: 'Message',
+      submitLabel: 'Send message',
+      unavailableMessage: 'The contact form will be available after the website launch.',
+    },
   },
 
   ru: {
     label: 'Контакты',
-    heading: 'Давайте поговорим о STM Balance',
-    description: 'STM Balance открыт для институционального и технологического сотрудничества, а также развития новых проектов.',
+    heading: 'Контакты и сотрудничество',
+    description: 'Мы открыты к сотрудничеству с государственными учреждениями, транспортными операторами, технологическими компаниями, инвестиционными и акселерационными программами. Свяжитесь с нами, если вы заинтересованы в партнёрстве, интеграции, пилотном проекте или развитии новых решений городской мобильности.',
     channels: [
       {
         title: 'Институциональное сотрудничество',
-        description: 'Для государственных учреждений, организаций и операторов, заинтересованных в сотрудничестве со STM Balance.',
+        description: 'Взаимодействие с государственными учреждениями, транспортными организациями и операторами городской мобильности.',
       },
       {
         title: 'Технологические интеграции',
-        description: 'Для компаний и технологических партнёров, заинтересованных в интеграциях, данных, инфраструктуре и новых функциях.',
+        description: 'Сотрудничество с технологическими компаниями по вопросам данных, инфраструктуры, сервисов и интеграций.',
       },
       {
-        title: 'Пилотные проекты и развитие',
-        description: 'Для предложений по пилотным проектам, тестированию в реальных условиях и новым направлениям развития.',
+        title: 'Пилотные проекты и партнёрства',
+        description: 'Предложения по запуску пилотных проектов, совместному тестированию решений и развитию новых направлений STM Balance.',
       },
     ],
+    contactInfo: {
+      emailLabel: 'E-mail',
+      emailValue: 'Корпоративный e-mail — скоро',
+      locationLabel: 'Местоположение',
+      locationValue: 'Монтевидео, Уругвай',
+    },
+    form: {
+      nameLabel: 'Имя',
+      organizationLabel: 'Организация',
+      emailLabel: 'E-mail',
+      subjectLabel: 'Тема',
+      messageLabel: 'Сообщение',
+      submitLabel: 'Отправить сообщение',
+      unavailableMessage: 'Форма обратной связи будет доступна после запуска сайта.',
+    },
   },
 
   fr: {
     label: 'Contact',
-    heading: 'Parlons de STM Balance',
-    description: 'STM Balance est ouvert aux collaborations institutionnelles et technologiques ainsi qu’au développement de nouveaux projets.',
+    heading: 'Contact et collaboration',
+    description: 'Nous sommes ouverts à la collaboration avec les institutions publiques, les opérateurs de transport, les entreprises technologiques ainsi que les programmes d’investissement et d’accélération. Contactez-nous si vous êtes intéressé par un partenariat, une intégration, un projet pilote ou le développement de nouvelles solutions de mobilité urbaine.',
     channels: [
       {
         title: 'Collaboration institutionnelle',
-        description: 'Pour les institutions publiques, les organisations et les opérateurs souhaitant collaborer avec STM Balance.',
+        description: 'Coopération avec les institutions publiques, les organisations de transport et les opérateurs de mobilité urbaine.',
       },
       {
         title: 'Intégrations technologiques',
-        description: 'Pour les entreprises et partenaires technologiques intéressés par les intégrations, les données, l’infrastructure ou de nouvelles fonctionnalités.',
+        description: 'Collaboration avec des entreprises technologiques autour des données, de l’infrastructure, des services et des intégrations.',
       },
       {
-        title: 'Pilotes et développement',
-        description: 'Pour les propositions de projets pilotes, les essais en conditions réelles et les nouvelles opportunités de développement.',
+        title: 'Projets pilotes et partenariats',
+        description: 'Propositions pour lancer des projets pilotes, tester conjointement des solutions et développer de nouveaux axes de STM Balance.',
       },
     ],
+    contactInfo: {
+      emailLabel: 'E-mail',
+      emailValue: 'E-mail professionnel — prochainement',
+      locationLabel: 'Localisation',
+      locationValue: 'Montevideo, Uruguay',
+    },
+    form: {
+      nameLabel: 'Nom',
+      organizationLabel: 'Organisation',
+      emailLabel: 'E-mail',
+      subjectLabel: 'Objet',
+      messageLabel: 'Message',
+      submitLabel: 'Envoyer le message',
+      unavailableMessage: 'Le formulaire de contact sera disponible après le lancement du site.',
+    },
   },
 
   de: {
     label: 'Kontakt',
-    heading: 'Sprechen wir über STM Balance',
-    description: 'STM Balance ist offen für institutionelle und technologische Zusammenarbeit sowie für die Entwicklung neuer Projekte.',
+    heading: 'Kontakt und Zusammenarbeit',
+    description: 'Wir sind offen für die Zusammenarbeit mit öffentlichen Institutionen, Verkehrsunternehmen, Technologieunternehmen sowie Investitions- und Accelerator-Programmen. Kontaktieren Sie uns, wenn Sie an einer Partnerschaft, Integration, einem Pilotprojekt oder der Entwicklung neuer Lösungen für urbane Mobilität interessiert sind.',
     channels: [
       {
         title: 'Institutionelle Zusammenarbeit',
-        description: 'Für öffentliche Institutionen, Organisationen und Betreiber, die an einer Zusammenarbeit mit STM Balance interessiert sind.',
+        description: 'Zusammenarbeit mit öffentlichen Institutionen, Verkehrsorganisationen und Betreibern urbaner Mobilität.',
       },
       {
         title: 'Technologische Integrationen',
-        description: 'Für Unternehmen und Technologiepartner mit Interesse an Integrationen, Daten, Infrastruktur oder neuen Funktionen.',
+        description: 'Zusammenarbeit mit Technologieunternehmen in den Bereichen Daten, Infrastruktur, Dienste und Integrationen.',
       },
       {
-        title: 'Pilotprojekte und Entwicklung',
-        description: 'Für Vorschläge zu Pilotprojekten, Tests unter realen Bedingungen und neue Entwicklungsmöglichkeiten.',
+        title: 'Pilotprojekte und Partnerschaften',
+        description: 'Vorschläge für Pilotprojekte, gemeinsame Tests von Lösungen und die Entwicklung neuer Bereiche von STM Balance.',
       },
     ],
+    contactInfo: {
+      emailLabel: 'E-Mail',
+      emailValue: 'Unternehmens-E-Mail — demnächst',
+      locationLabel: 'Standort',
+      locationValue: 'Montevideo, Uruguay',
+    },
+    form: {
+      nameLabel: 'Name',
+      organizationLabel: 'Organisation',
+      emailLabel: 'E-Mail',
+      subjectLabel: 'Betreff',
+      messageLabel: 'Nachricht',
+      submitLabel: 'Nachricht senden',
+      unavailableMessage: 'Das Kontaktformular wird nach dem Start der Website verfügbar sein.',
+    },
   },
 };
