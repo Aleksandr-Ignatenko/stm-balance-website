@@ -3,7 +3,7 @@ import type { Language } from '../languages';
 type ProductFeature = {
   title: string;
   description: string;
-  status: 'implemented' | 'development';
+  status: 'implemented' | 'development' | 'future';
 };
 
 type ProductTranslations = {
@@ -12,56 +12,59 @@ type ProductTranslations = {
   description: string;
   implementedStatus: string;
   developmentStatus: string;
+  futureStatus: string;
   features: ProductFeature[];
 };
 
 export const productTranslations: Record<Language, ProductTranslations> = {
   es: {
     label: 'Producto',
-    heading: 'Todo STM en una sola aplicación',
-    description: 'STM Balance reúne las funciones esenciales de movilidad y gestión de la tarjeta STM en una experiencia digital unificada.',
+    heading: 'Una plataforma digital unificada para la movilidad urbana',
+    description: 'STM Balance es una plataforma móvil que integra la gestión de la tarjeta STM, el transporte público, las rutas y los servicios urbanos relacionados en una única interfaz digital. El proyecto evoluciona por etapas: desde las funciones básicas para los usuarios de STM hacia un ecosistema más amplio de movilidad urbana, orientado a la comodidad, la accesibilidad y la integración de diferentes servicios.',
     implementedStatus: 'Implementado',
     developmentStatus: 'En desarrollo',
+    futureStatus: 'A futuro',
     features: [
       {
         title: 'Tarjeta STM',
-        description: 'Consulta de saldo y acceso a la información principal de la tarjeta STM desde el teléfono.',
+        description: 'Consulta de saldo y acceso a la información principal de la tarjeta STM directamente desde el teléfono.',
         status: 'implemented',
       },
       {
         title: 'NFC',
-        description: 'Lectura de la tarjeta STM mediante NFC para consultar sus datos directamente desde un dispositivo compatible.',
+        description: 'Lectura de la tarjeta STM mediante NFC en dispositivos móviles compatibles.',
         status: 'implemented',
       },
       {
-        title: 'Autobuses en tiempo real',
-        description: 'Visualización de autobuses sobre el mapa y seguimiento de su movimiento en tiempo real.',
-        status: 'implemented',
-      },
-      {
-        title: 'Paradas y rutas',
-        description: 'Consulta de paradas, líneas y recorridos para entender mejor la red de transporte.',
+        title: 'Transporte en tiempo real',
+        description: 'Visualización de autobuses, paradas y recorridos en el mapa con actualización de los datos de transporte.',
         status: 'implemented',
       },
       {
         title: 'Planificación de viajes',
-        description: 'Construcción de opciones de viaje combinando recorridos en autobús y tramos a pie.',
+        description: 'Construcción de opciones de viaje teniendo en cuenta el transporte público, las conexiones y los tramos a pie.',
         status: 'development',
       },
       {
         title: 'Servicios STM',
-        description: 'Evolución hacia recargas, historial de viajes, tarjetas familiares y nuevas herramientas para los usuarios de STM.',
+        description: 'Desarrollo de funciones de recarga, historial de viajes, tarjetas familiares y gestión de las tarjetas de los miembros de la familia.',
         status: 'development',
+      },
+      {
+        title: 'Expansión del ecosistema urbano',
+        description: 'Integración de servicios adicionales de movilidad urbana, incluyendo taxis, delivery, estacionamiento, micromovilidad y otras áreas.',
+        status: 'future',
       },
     ],
   },
 
   pt: {
     label: 'Produto',
-    heading: 'Tudo do STM em um só aplicativo',
-    description: 'STM Balance reúne as funções essenciais de mobilidade e gestão do cartão STM em uma experiência digital unificada.',
+    heading: 'Uma plataforma digital unificada para a mobilidade urbana',
+    description: 'STM Balance é uma plataforma móvel que integra a gestão do cartão STM, o transporte público, as rotas e os serviços urbanos relacionados em uma única interface digital. O projeto evolui por etapas: das funções básicas para os usuários do STM para um ecossistema mais amplo de mobilidade urbana, voltado à conveniência, acessibilidade e integração de diferentes serviços.',
     implementedStatus: 'Implementado',
     developmentStatus: 'Em desenvolvimento',
+    futureStatus: 'No futuro',
     features: [
       {
         title: 'Cartão STM',
@@ -70,38 +73,39 @@ export const productTranslations: Record<Language, ProductTranslations> = {
       },
       {
         title: 'NFC',
-        description: 'Leitura do cartão STM por NFC para consultar seus dados diretamente em um dispositivo compatível.',
+        description: 'Leitura do cartão STM por NFC em dispositivos móveis compatíveis.',
         status: 'implemented',
       },
       {
-        title: 'Ônibus em tempo real',
-        description: 'Visualização dos ônibus no mapa e acompanhamento de seus movimentos em tempo real.',
-        status: 'implemented',
-      },
-      {
-        title: 'Paradas e rotas',
-        description: 'Consulta de paradas, linhas e trajetos para compreender melhor a rede de transporte.',
+        title: 'Transporte em tempo real',
+        description: 'Visualização de ônibus, paradas e trajetos no mapa com atualização dos dados de transporte.',
         status: 'implemented',
       },
       {
         title: 'Planejamento de viagens',
-        description: 'Construção de opções de viagem combinando trajetos de ônibus e trechos a pé.',
+        description: 'Construção de opções de viagem considerando o transporte público, as conexões e os trechos a pé.',
         status: 'development',
       },
       {
         title: 'Serviços STM',
-        description: 'Evolução para recargas, histórico de viagens, cartões familiares e novas ferramentas para os usuários do STM.',
+        description: 'Desenvolvimento de funções de recarga, histórico de viagens, cartões familiares e gestão dos cartões dos membros da família.',
         status: 'development',
+      },
+      {
+        title: 'Expansão do ecossistema urbano',
+        description: 'Integração de serviços adicionais de mobilidade urbana, incluindo táxis, delivery, estacionamento, micromobilidade e outras áreas.',
+        status: 'future',
       },
     ],
   },
 
   en: {
     label: 'Product',
-    heading: 'Everything STM in one app',
-    description: 'STM Balance brings together essential mobility and STM card management features in one unified digital experience.',
+    heading: 'A unified digital platform for urban mobility',
+    description: 'STM Balance is a mobile platform that brings together STM card management, public transport, routes and related urban services in a single digital interface. The project is being developed in stages: from essential functions for STM users toward a broader urban mobility ecosystem focused on convenience, accessibility and the integration of different services.',
     implementedStatus: 'Implemented',
     developmentStatus: 'In development',
+    futureStatus: 'Future',
     features: [
       {
         title: 'STM Card',
@@ -110,38 +114,39 @@ export const productTranslations: Record<Language, ProductTranslations> = {
       },
       {
         title: 'NFC',
-        description: 'NFC reading of the STM card to access its data directly from a compatible device.',
+        description: 'STM card reading via NFC on compatible mobile devices.',
         status: 'implemented',
       },
       {
-        title: 'Real-time buses',
-        description: 'View buses on the map and follow their movement in real time.',
-        status: 'implemented',
-      },
-      {
-        title: 'Stops and routes',
-        description: 'Explore stops, lines and routes to better understand the public transport network.',
+        title: 'Real-time transport',
+        description: 'Display of buses, stops and routes on the map with updated transport data.',
         status: 'implemented',
       },
       {
         title: 'Trip planning',
-        description: 'Build travel options combining bus routes with walking segments.',
+        description: 'Building travel options that take into account public transport routes, connections and walking segments.',
         status: 'development',
       },
       {
         title: 'STM services',
-        description: 'Expansion toward top-ups, trip history, family cards and new tools for STM users.',
+        description: 'Development of top-up functions, trip history, family cards and management of family members’ cards.',
         status: 'development',
+      },
+      {
+        title: 'Urban ecosystem expansion',
+        description: 'Integration of additional urban mobility services, including taxis, delivery, parking, micromobility and other areas.',
+        status: 'future',
       },
     ],
   },
 
   ru: {
     label: 'Продукт',
-    heading: 'Всё STM в одном приложении',
-    description: 'STM Balance объединяет основные функции городской мобильности и управления картой STM в едином цифровом интерфейсе.',
+    heading: 'Единая цифровая платформа для городской мобильности',
+    description: 'STM Balance — мобильная платформа, объединяющая работу с картой STM, общественный транспорт, маршруты и связанные городские сервисы в едином цифровом интерфейсе. Проект развивается поэтапно: от базовых функций для пользователей STM к более широкой экосистеме городской мобильности, ориентированной на удобство, доступность и интеграцию различных сервисов.',
     implementedStatus: 'Реализовано',
-    developmentStatus: 'В разработке',
+    developmentStatus: 'В развитии',
+    futureStatus: 'В перспективе',
     features: [
       {
         title: 'Карта STM',
@@ -150,38 +155,39 @@ export const productTranslations: Record<Language, ProductTranslations> = {
       },
       {
         title: 'NFC',
-        description: 'Считывание карты STM через NFC для получения её данных непосредственно на совместимом устройстве.',
+        description: 'Считывание карты STM через NFC на совместимых мобильных устройствах.',
         status: 'implemented',
       },
       {
-        title: 'Автобусы в реальном времени',
-        description: 'Отображение автобусов на карте и отслеживание их движения в реальном времени.',
-        status: 'implemented',
-      },
-      {
-        title: 'Остановки и маршруты',
-        description: 'Просмотр остановок, линий и маршрутов для удобной работы с транспортной сетью.',
+        title: 'Транспорт в реальном времени',
+        description: 'Отображение автобусов, остановок и маршрутов на карте с актуализацией транспортных данных.',
         status: 'implemented',
       },
       {
         title: 'Планирование поездок',
-        description: 'Построение вариантов поездки с сочетанием автобусных маршрутов и пеших участков.',
+        description: 'Построение вариантов поездки с учётом маршрутов общественного транспорта, пересадок и пеших участков.',
         status: 'development',
       },
       {
         title: 'Сервисы STM',
-        description: 'Развитие пополнения, истории поездок, семейных карт и новых инструментов для пользователей STM.',
+        description: 'Развитие функций пополнения, истории поездок, семейных карт и управления картами членов семьи.',
         status: 'development',
+      },
+      {
+        title: 'Расширение городской экосистемы',
+        description: 'Интеграция дополнительных сервисов городской мобильности, включая такси, доставку, парковку, микромобильность и другие направления.',
+        status: 'future',
       },
     ],
   },
 
   fr: {
     label: 'Produit',
-    heading: 'Tout STM dans une seule application',
-    description: 'STM Balance réunit les fonctions essentielles de mobilité et de gestion de la carte STM dans une expérience numérique unifiée.',
+    heading: 'Une plateforme numérique unifiée pour la mobilité urbaine',
+    description: 'STM Balance est une plateforme mobile qui réunit la gestion de la carte STM, les transports publics, les itinéraires et les services urbains associés dans une seule interface numérique. Le projet se développe par étapes : des fonctions essentielles pour les utilisateurs de STM vers un écosystème plus large de mobilité urbaine, axé sur la simplicité, l’accessibilité et l’intégration de différents services.',
     implementedStatus: 'Implémenté',
     developmentStatus: 'En développement',
+    futureStatus: 'À venir',
     features: [
       {
         title: 'Carte STM',
@@ -190,38 +196,39 @@ export const productTranslations: Record<Language, ProductTranslations> = {
       },
       {
         title: 'NFC',
-        description: 'Lecture de la carte STM par NFC pour consulter ses données directement depuis un appareil compatible.',
+        description: 'Lecture de la carte STM via NFC sur les appareils mobiles compatibles.',
         status: 'implemented',
       },
       {
-        title: 'Bus en temps réel',
-        description: 'Visualisation des bus sur la carte et suivi de leurs déplacements en temps réel.',
-        status: 'implemented',
-      },
-      {
-        title: 'Arrêts et itinéraires',
-        description: 'Consultation des arrêts, des lignes et des parcours afin de mieux comprendre le réseau de transport.',
+        title: 'Transport en temps réel',
+        description: 'Affichage des bus, des arrêts et des itinéraires sur la carte avec actualisation des données de transport.',
         status: 'implemented',
       },
       {
         title: 'Planification des trajets',
-        description: 'Création d’options de trajet combinant les parcours en bus et les portions à pied.',
+        description: 'Création d’options de trajet tenant compte des transports publics, des correspondances et des portions à pied.',
         status: 'development',
       },
       {
         title: 'Services STM',
-        description: 'Évolution vers les recharges, l’historique des trajets, les cartes familiales et de nouveaux outils pour les utilisateurs STM.',
+        description: 'Développement des fonctions de recharge, de l’historique des trajets, des cartes familiales et de la gestion des cartes des membres de la famille.',
         status: 'development',
+      },
+      {
+        title: 'Extension de l’écosystème urbain',
+        description: 'Intégration de services supplémentaires de mobilité urbaine, notamment les taxis, la livraison, le stationnement, la micromobilité et d’autres domaines.',
+        status: 'future',
       },
     ],
   },
 
   de: {
     label: 'Produkt',
-    heading: 'Alles rund um STM in einer einzigen App',
-    description: 'STM Balance vereint die wichtigsten Funktionen für Mobilität und die Verwaltung der STM-Karte in einer einheitlichen digitalen Anwendung.',
+    heading: 'Eine einheitliche digitale Plattform für urbane Mobilität',
+    description: 'STM Balance ist eine mobile Plattform, die die Verwaltung der STM-Karte, den öffentlichen Verkehr, Routen und damit verbundene städtische Dienste in einer einzigen digitalen Oberfläche zusammenführt. Das Projekt wird schrittweise entwickelt: von grundlegenden Funktionen für STM-Nutzer hin zu einem umfassenderen Ökosystem für urbane Mobilität mit Fokus auf Komfort, Zugänglichkeit und die Integration verschiedener Dienste.',
     implementedStatus: 'Implementiert',
     developmentStatus: 'In Entwicklung',
+    futureStatus: 'Geplant',
     features: [
       {
         title: 'STM-Karte',
@@ -230,28 +237,28 @@ export const productTranslations: Record<Language, ProductTranslations> = {
       },
       {
         title: 'NFC',
-        description: 'Auslesen der STM-Karte per NFC, um ihre Daten direkt auf einem kompatiblen Gerät abzurufen.',
+        description: 'Auslesen der STM-Karte über NFC auf kompatiblen Mobilgeräten.',
         status: 'implemented',
       },
       {
-        title: 'Busse in Echtzeit',
-        description: 'Anzeige von Bussen auf der Karte und Verfolgung ihrer Bewegung in Echtzeit.',
-        status: 'implemented',
-      },
-      {
-        title: 'Haltestellen und Routen',
-        description: 'Anzeige von Haltestellen, Linien und Strecken für einen besseren Überblick über das Verkehrsnetz.',
+        title: 'Verkehr in Echtzeit',
+        description: 'Anzeige von Bussen, Haltestellen und Routen auf der Karte mit aktualisierten Verkehrsdaten.',
         status: 'implemented',
       },
       {
         title: 'Reiseplanung',
-        description: 'Erstellung von Fahrtoptionen durch die Kombination von Busstrecken und Fußwegen.',
+        description: 'Erstellung von Fahrtoptionen unter Berücksichtigung des öffentlichen Verkehrs, von Umstiegen und Fußwegen.',
         status: 'development',
       },
       {
         title: 'STM-Dienste',
-        description: 'Weiterentwicklung hin zu Aufladungen, Fahrtverlauf, Familienkarten und neuen Werkzeugen für STM-Nutzer.',
+        description: 'Entwicklung von Funktionen für Aufladungen, Fahrtverlauf, Familienkarten und die Verwaltung der Karten von Familienmitgliedern.',
         status: 'development',
+      },
+      {
+        title: 'Erweiterung des urbanen Ökosystems',
+        description: 'Integration zusätzlicher Dienste für urbane Mobilität, darunter Taxis, Lieferdienste, Parken, Mikromobilität und weitere Bereiche.',
+        status: 'future',
       },
     ],
   },
