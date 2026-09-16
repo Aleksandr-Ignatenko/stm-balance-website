@@ -265,6 +265,81 @@ main {
   object-fit: cover;
 }
 
+/* ---------------------------------------------------------
+   HERO — OVERLAY
+   --------------------------------------------------------- */
+
+.hero-slider-logo {
+  position: absolute;
+  left: 7.6%;
+  top: 22%;
+  z-index: 4;
+  width: 5.86%;
+  height: auto;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero-slide-copy {
+  position: absolute;
+  left: 15.73%;
+  top: 25.2%;
+  z-index: 3;
+  width: 44%;
+  font-family: Arial, Helvetica, sans-serif;
+  pointer-events: none;
+}
+
+.hero .hero-slide-brand {
+  margin: 0;
+  color: #03468e;
+  font-size: 4.7vw;
+  line-height: 1;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.hero .hero-slide-brand strong {
+  font-weight: 800;
+}
+
+.hero-slide-heading {
+  margin: 0.75vw 0 0;
+  color: #293e63;
+  font-size: 2.05vw;
+  line-height: 1.08;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.hero-slide-description {
+  margin: 1vw 0 0;
+  color: #39507a;
+  font-size: 1.38vw;
+  line-height: 1.2;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+/* Более длинные переводы сохраняем в одну строку */
+
+.hero-slide-copy--pt .hero-slide-description {
+  font-size: 1.25vw;
+}
+
+.hero-slide-copy--ru .hero-slide-description {
+  font-size: 1.1vw;
+}
+
+.hero-slide-copy--fr .hero-slide-description {
+  font-size: 1.18vw;
+}
+
+.hero-slide-copy--de .hero-slide-description {
+  font-size: 1.25vw;
+}
+
 .hero-slider-dots {
   position: absolute;
   left: 50%;
