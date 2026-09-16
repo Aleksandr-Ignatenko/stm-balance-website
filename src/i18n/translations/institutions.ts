@@ -68,3 +68,116 @@ export const institutionsTranslations: Record<Language, InstitutionsTranslations
       },
     ],
   },
+
+  en: {
+    label: 'Institutions',
+    heading: 'Collaboration to build the mobility of the future',
+    description: 'STM Balance seeks to collaborate with public institutions, transport operators and mobility ecosystem organizations to develop new digital solutions for users.',
+    directions: [
+      {
+        title: 'Public institutions',
+        description: 'Collaboration with public organizations involved in transport, urban mobility and services for citizens.',
+      },
+      {
+        title: 'Transport operators',
+        description: 'Integration with companies and operators responsible for public transport services.',
+      },
+      {
+        title: 'Technology partners',
+        description: 'Cooperation with technology companies and solution providers that can complement the STM Balance platform.',
+      },
+      {
+        title: 'Support programs and accelerators',
+        description: 'Participation in innovation, acceleration and support programs for the development of technology companies.',
+      },
+      {
+        title: 'Pilots and integrations',
+        description: 'Development of pilot projects and integrations to validate new functionality in real-world environments.',
+      },
+    ],
+  },
+
+  ru: {
+    label: 'Организации',
+    heading: 'Сотрудничество для развития мобильности будущего',
+    description: 'STM Balance стремится сотрудничать с государственными учреждениями, транспортными операторами и организациями экосистемы городской мобильности для развития новых цифровых решений для пользователей.',
+    directions: [
+      {
+        title: 'Государственные учреждения',
+        description: 'Сотрудничество с государственными организациями, связанными с транспортом, городской мобильностью и сервисами для граждан.',
+      },
+      {
+        title: 'Транспортные операторы',
+        description: 'Интеграция с компаниями и операторами, отвечающими за работу общественного транспорта.',
+      },
+      {
+        title: 'Технологические партнёры',
+        description: 'Сотрудничество с технологическими компаниями и поставщиками решений, способных дополнить платформу STM Balance.',
+      },
+      {
+        title: 'Программы поддержки и акселераторы',
+        description: 'Участие в программах инноваций, акселерации и поддержки развития технологических компаний.',
+      },
+      {
+        title: 'Пилотные проекты и интеграции',
+        description: 'Разработка пилотных проектов и интеграций для проверки новых функций в реальных условиях.',
+      },
+    ],
+  },
+
+  fr: {
+    label: 'Institutions',
+    heading: 'Collaborer pour développer la mobilité de demain',
+    description: 'STM Balance souhaite collaborer avec les institutions publiques, les opérateurs de transport et les organisations de l’écosystème de la mobilité afin de développer de nouvelles solutions numériques pour les utilisateurs.',
+    directions: [
+      {
+        title: 'Institutions publiques',
+        description: 'Collaboration avec les organismes publics liés au transport, à la mobilité urbaine et aux services destinés aux citoyens.',
+      },
+      {
+        title: 'Opérateurs de transport',
+        description: 'Intégration avec les entreprises et les opérateurs responsables des services de transport public.',
+      },
+      {
+        title: 'Partenaires technologiques',
+        description: 'Coopération avec des entreprises technologiques et des fournisseurs de solutions pouvant compléter la plateforme STM Balance.',
+      },
+      {
+        title: 'Programmes de soutien et accélérateurs',
+        description: 'Participation à des programmes d’innovation, d’accélération et de soutien au développement des entreprises technologiques.',
+      },
+      {
+        title: 'Pilotes et intégrations',
+        description: 'Développement de projets pilotes et d’intégrations permettant de valider de nouvelles fonctionnalités dans des conditions réelles.',
+      },
+    ],
+  },
+
+  de: {
+    label: 'Institutionen',
+    heading: 'Gemeinsam die Mobilität der Zukunft entwickeln',
+    description: 'STM Balance möchte mit öffentlichen Institutionen, Verkehrsunternehmen und Organisationen des Mobilitätsökosystems zusammenarbeiten, um neue digitale Lösungen für die Nutzer zu entwickeln.',
+    directions: [
+      {
+        title: 'Öffentliche Institutionen',
+        description: 'Zusammenarbeit mit öffentlichen Einrichtungen aus den Bereichen Verkehr, urbane Mobilität und Dienstleistungen für Bürger.',
+      },
+      {
+        title: 'Verkehrsunternehmen',
+        description: 'Integration mit Unternehmen und Betreibern, die für öffentliche Verkehrsdienste verantwortlich sind.',
+      },
+      {
+        title: 'Technologiepartner',
+        description: 'Zusammenarbeit mit Technologieunternehmen und Lösungsanbietern, die die STM-Balance-Plattform ergänzen können.',
+      },
+      {
+        title: 'Förderprogramme und Acceleratoren',
+        description: 'Teilnahme an Innovations-, Accelerator- und Förderprogrammen für die Entwicklung von Technologieunternehmen.',
+      },
+      {
+        title: 'Pilotprojekte und Integrationen',
+        description: 'Entwicklung von Pilotprojekten und Integrationen zur Erprobung neuer Funktionen unter realen Bedingungen.',
+      },
+    ],
+  },
+};
