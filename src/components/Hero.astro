@@ -68,19 +68,21 @@ const sliderLabel = sliderLabels[language];
 
 <section class="hero">
   <div class="hero-container">
-    <div class="hero-content">
-      <p class="hero-label">{hero.label}</p>
+    {showHeroContent && (
+      <div class="hero-content">
+        <p class="hero-label">{hero.label}</p>
 
-      <h1>STM Balance</h1>
+        <h1>STM Balance</h1>
 
-      <h2>
-        {hero.heading}
-      </h2>
+        <h2>
+          {hero.heading}
+        </h2>
 
-      <p class="hero-description">
-        {hero.description}
-      </p>
-    </div>
+        <p class="hero-description">
+          {hero.description}
+        </p>
+      </div>
+    )}
 
     <div
       class="hero-slider"
