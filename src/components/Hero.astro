@@ -24,11 +24,6 @@ const heroSlides = Array.from(
 );
 
 const heroLogoUrl = `${baseUrl}images/hero/overlay/w.png`;
-
-const firstSlide = hero.slider.slides[0];
-
-const [brandStrong, ...brandRestParts] = firstSlide.brand.split(' ');
-const brandRest = brandRestParts.join(' ');
 ---
 
 <section class="hero">
@@ -65,44 +60,48 @@ const brandRest = brandRestParts.join(' ');
       />
 
       <div class="hero-slider-track">
-        {heroSlides.map((src, index) => (
-          <div
-            class:list={[
-              'hero-slide',
-              { 'hero-slide--active': index === 0 }
-            ]}
-            data-hero-slide
-            aria-hidden={index === 0 ? 'false' : 'true'}
-          >
-            <img
-              src={src}
-              alt=""
-              width="1672"
-              height="941"
-              loading={index === 0 ? 'eager' : 'lazy'}
-              fetchpriority={index === 0 ? 'high' : 'auto'}
-            />
+        {heroSlides.map((src, index) => {
+          const slideText = hero.slider.slides[index];
+          const [brandStrong, ...brandRestParts] = (slideText?.brand ?? 'STM Balance').split(' ');
+          const brandRest = brandRestParts.join(' ');
 
-            {index === 0 && (
-              <div
-                class={`hero-slide-copy hero-slide-copy--${language}`}
-              >
-                <h1 class="hero-slide-brand">
-                  <strong>{brandStrong}</strong>
-                  {brandRest && <span> {brandRest}</span>}
-                </h1>
+          return (
+            <div
+              class:list={[
+                'hero-slide',
+                { 'hero-slide--active': index === 0 }
+              ]}
+              data-hero-slide
+              aria-hidden={index === 0 ? 'false' : 'true'}
+            >
+              <img
+                src={src}
+                alt=""
+                width="1672"
+                height="941"
+                loading={index === 0 ? 'eager' : 'lazy'}
+                fetchpriority={index === 0 ? 'high' : 'auto'}
+              />
 
-                <p class="hero-slide-heading">
-                  {firstSlide.heading}
-                </p>
+              {slideText && (
+                <div class={`hero-slide-copy hero-slide-copy--${language}`}>
+                  <h1 class="hero-slide-brand">
+                    <strong>{brandStrong}</strong>
+                    {brandRest && <span> {brandRest}</span>}
+                  </h1>
 
-                <p class="hero-slide-description">
-                  {firstSlide.description}
-                </p>
-              </div>
-            )}
-          </div>
-        ))}
+                  <p class="hero-slide-heading">
+                    {slideText.heading}
+                  </p>
+
+                  <p class="hero-slide-description">
+                    {slideText.description}
+                  </p>
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
 
       <div class="hero-slider-dots">
