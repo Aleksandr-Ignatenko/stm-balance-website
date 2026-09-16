@@ -9,6 +9,58 @@ const {
 };
 
 const hero = heroTranslations[language];
+
+const baseUrl = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+
+const heroSlides = Array.from(
+  { length: 9 },
+  (_, index) =>
+    `${baseUrl}images/hero/slides/stm-balance-hero-${String(index + 1).padStart(2, '0')}.jpg`
+);
+
+const sliderLabels: Record<
+  Language,
+  {
+    previous: string;
+    next: string;
+    slide: string;
+  }
+> = {
+  es: {
+    previous: 'Imagen anterior',
+    next: 'Imagen siguiente',
+    slide: 'Ir a la imagen',
+  },
+  pt: {
+    previous: 'Imagem anterior',
+    next: 'Próxima imagem',
+    slide: 'Ir para a imagem',
+  },
+  en: {
+    previous: 'Previous image',
+    next: 'Next image',
+    slide: 'Go to image',
+  },
+  ru: {
+    previous: 'Предыдущее изображение',
+    next: 'Следующее изображение',
+    slide: 'Перейти к изображению',
+  },
+  fr: {
+    previous: 'Image précédente',
+    next: 'Image suivante',
+    slide: 'Aller à l’image',
+  },
+  de: {
+    previous: 'Vorheriges Bild',
+    next: 'Nächstes Bild',
+    slide: 'Zum Bild wechseln',
+  },
+};
+
+const sliderLabel = sliderLabels[language];
 ---
 
 <section class="hero">
@@ -27,5 +79,159 @@ const hero = heroTranslations[language];
       </p>
     </div>
 
+    <div
+      class="hero-slider"
+      data-hero-slider
+      aria-roledescription="carousel"
+    >
+      <div class="hero-slider-track">
+        {heroSlides.map((src, index) => (
+          <div
+            class:list={[
+              'hero-slide',
+              { 'hero-slide--active': index === 0 }
+            ]}
+            data-hero-slide
+            aria-hidden={index === 0 ? 'false' : 'true'}
+          >
+            <img
+              src={src}
+              alt=""
+              width="1672"
+              height="941"
+              loading={index === 0 ? 'eager' : 'lazy'}
+              fetchpriority={index === 0 ? 'high' : 'auto'}
+            />
+          </div>
+        ))}
+      </div>
+
+      <button
+        class="hero-slider-button hero-slider-button--previous"
+        type="button"
+        data-hero-previous
+        aria-label={sliderLabel.previous}
+      >
+        ‹
+      </button>
+
+      <button
+        class="hero-slider-button hero-slider-button--next"
+        type="button"
+        data-hero-next
+        aria-label={sliderLabel.next}
+      >
+        ›
+      </button>
+
+      <div class="hero-slider-dots">
+        {heroSlides.map((_, index) => (
+          <button
+            class:list={[
+              'hero-slider-dot',
+              { 'hero-slider-dot--active': index === 0 }
+            ]}
+            type="button"
+            data-hero-dot={index}
+            aria-label={`${sliderLabel.slide} ${index + 1}`}
+            aria-current={index === 0 ? 'true' : undefined}
+          ></button>
+        ))}
+      </div>
+    </div>
   </div>
 </section>
+
+<script>
+  const slider = document.querySelector<HTMLElement>('[data-hero-slider]');
+
+  if (slider) {
+    const slides = Array.from(
+      slider.querySelectorAll<HTMLElement>('[data-hero-slide]')
+    );
+
+    const dots = Array.from(
+      slider.querySelectorAll<HTMLButtonElement>('[data-hero-dot]')
+    );
+
+    const previousButton =
+      slider.querySelector<HTMLButtonElement>('[data-hero-previous]');
+
+    const nextButton =
+      slider.querySelector<HTMLButtonElement>('[data-hero-next]');
+
+    let currentIndex = 0;
+    let autoplayTimer: number | undefined;
+
+    const reducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+
+    const showSlide = (index: number) => {
+      currentIndex = (index + slides.length) % slides.length;
+
+      slides.forEach((slide, slideIndex) => {
+        const isActive = slideIndex === currentIndex;
+
+        slide.classList.toggle('hero-slide--active', isActive);
+        slide.setAttribute('aria-hidden', String(!isActive));
+      });
+
+      dots.forEach((dot, dotIndex) => {
+        const isActive = dotIndex === currentIndex;
+
+        dot.classList.toggle('hero-slider-dot--active', isActive);
+
+        if (isActive) {
+          dot.setAttribute('aria-current', 'true');
+        } else {
+          dot.removeAttribute('aria-current');
+        }
+      });
+    };
+
+    const stopAutoplay = () => {
+      if (autoplayTimer !== undefined) {
+        window.clearInterval(autoplayTimer);
+        autoplayTimer = undefined;
+      }
+    };
+
+    const startAutoplay = () => {
+      if (reducedMotion) {
+        return;
+      }
+
+      stopAutoplay();
+
+      autoplayTimer = window.setInterval(() => {
+        showSlide(currentIndex + 1);
+      }, 6000);
+    };
+
+    previousButton?.addEventListener('click', () => {
+      showSlide(currentIndex - 1);
+      startAutoplay();
+    });
+
+    nextButton?.addEventListener('click', () => {
+      showSlide(currentIndex + 1);
+      startAutoplay();
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        showSlide(index);
+        startAutoplay();
+      });
+    });
+
+    slider.addEventListener('mouseenter', stopAutoplay);
+    slider.addEventListener('mouseleave', startAutoplay);
+
+    slider.addEventListener('focusin', stopAutoplay);
+    slider.addEventListener('focusout', startAutoplay);
+
+    startAutoplay();
+  }
+</script>
