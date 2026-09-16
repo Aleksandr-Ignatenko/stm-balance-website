@@ -34,5 +34,94 @@ const contact = contactTranslations[language];
         </article>
       ))}
     </div>
+
+    <div class="contact-details">
+      <div class="contact-info">
+        <div class="contact-info-item">
+          <h3>{contact.contactInfo.emailLabel}</h3>
+          <p>{contact.contactInfo.emailValue}</p>
+        </div>
+
+        <div class="contact-info-item">
+          <h3>{contact.contactInfo.locationLabel}</h3>
+          <p>{contact.contactInfo.locationValue}</p>
+        </div>
+      </div>
+
+      <form class="contact-form">
+        <div class="contact-form-field">
+          <label for="contact-name">
+            {contact.form.nameLabel}
+          </label>
+
+          <input
+            id="contact-name"
+            name="name"
+            type="text"
+            disabled
+          />
+        </div>
+
+        <div class="contact-form-field">
+          <label for="contact-organization">
+            {contact.form.organizationLabel}
+          </label>
+
+          <input
+            id="contact-organization"
+            name="organization"
+            type="text"
+            disabled
+          />
+        </div>
+
+        <div class="contact-form-field">
+          <label for="contact-email">
+            {contact.form.emailLabel}
+          </label>
+
+          <input
+            id="contact-email"
+            name="email"
+            type="email"
+            disabled
+          />
+        </div>
+
+        <div class="contact-form-field">
+          <label for="contact-subject">
+            {contact.form.subjectLabel}
+          </label>
+
+          <input
+            id="contact-subject"
+            name="subject"
+            type="text"
+            disabled
+          />
+        </div>
+
+        <div class="contact-form-field">
+          <label for="contact-message">
+            {contact.form.messageLabel}
+          </label>
+
+          <textarea
+            id="contact-message"
+            name="message"
+            rows="6"
+            disabled
+          ></textarea>
+        </div>
+
+        <button type="button" disabled>
+          {contact.form.submitLabel}
+        </button>
+
+        <p class="contact-form-notice">
+          {contact.form.unavailableMessage}
+        </p>
+      </form>
+    </div>
   </div>
 </section>
