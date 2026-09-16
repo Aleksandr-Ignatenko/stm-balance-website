@@ -15,6 +15,21 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
   : `${import.meta.env.BASE_URL}/`;
 
 const productMockupUrl = `${baseUrl}images/product/stm-balance-mockup.png`;
+
+const getStatusLabel = (
+  status: 'implemented' | 'development' | 'future'
+) => {
+  switch (status) {
+    case 'implemented':
+      return product.implementedStatus;
+
+    case 'development':
+      return product.developmentStatus;
+
+    case 'future':
+      return product.futureStatus;
+  }
+};
 ---
 
 <section class="product-section" id="producto">
@@ -44,9 +59,7 @@ const productMockupUrl = `${baseUrl}images/product/stm-balance-mockup.png`;
       {product.features.map((feature) => (
         <article class="product-feature">
           <p class={`product-feature-status product-feature-status--${feature.status}`}>
-            {feature.status === 'implemented'
-              ? product.implementedStatus
-              : product.developmentStatus}
+            {getStatusLabel(feature.status)}
           </p>
 
           <h3>{feature.title}</h3>
