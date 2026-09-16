@@ -10,6 +10,9 @@ const {
 
 const hero = heroTranslations[language];
 
+// Временно скрываем текстовый блок Hero на всех языках.
+const showHeroContent = false;
+
 const baseUrl = import.meta.env.BASE_URL.endsWith('/')
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
