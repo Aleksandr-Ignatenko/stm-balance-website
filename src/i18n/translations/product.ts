@@ -10,6 +10,8 @@ type ProductTranslations = {
   label: string;
   heading: string;
   description: string;
+  goalLabel: string;
+  goalDescription: string;
   implementedStatus: string;
   developmentStatus: string;
   futureStatus: string;
