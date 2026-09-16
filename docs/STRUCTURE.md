@@ -51,6 +51,16 @@ stm-balance-website/
 │   │   ├── Team.astro
 │   │   └── Technology.astro
 │   ├── i18n/
+│   │   ├── translations/
+│   │   │   ├── company.ts
+│   │   │   ├── contact.ts
+│   │   │   ├── footer.ts
+│   │   │   ├── hero.ts
+│   │   │   ├── institutions.ts
+│   │   │   ├── navigation.ts
+│   │   │   ├── product.ts
+│   │   │   ├── team.ts
+│   │   │   └── technology.ts
 │   │   ├── languages.ts
 │   │   └── translations.ts
 │   ├── layouts/
