@@ -15,168 +15,168 @@ type TechnologyTranslations = {
 export const technologyTranslations: Record<Language, TechnologyTranslations> = {
   es: {
     label: 'Tecnología',
-    heading: 'Tecnología preparada para la movilidad urbana',
-    description: 'STM Balance combina tecnologías móviles, geolocalización, datos en tiempo real y NFC para construir una experiencia de transporte moderna y unificada.',
+    heading: 'Plataforma tecnológica para la movilidad urbana moderna',
+    description: 'STM Balance integra tecnologías móviles, NFC, geolocalización, servicios cartográficos y datos en tiempo real en una única base tecnológica. La arquitectura de la plataforma está diseñada para facilitar su expansión futura, la integración con la infraestructura de transporte, servicios externos y nuevas soluciones digitales de movilidad urbana.',
     technologies: [
       {
         title: 'NFC',
-        description: 'Lectura de tarjetas STM mediante tecnología NFC desde dispositivos compatibles.',
+        description: 'Interacción con tarjetas STM mediante NFC en dispositivos móviles compatibles para acceder de forma rápida y sencilla a la información de la tarjeta.',
       },
       {
         title: 'Geolocalización',
-        description: 'Ubicación del usuario y representación de elementos de movilidad sobre el mapa.',
+        description: 'Determinación de la ubicación del usuario y visualización de elementos actuales de movilidad urbana teniendo en cuenta su posición.',
       },
       {
         title: 'Datos en tiempo real',
-        description: 'Actualización continua de la posición de los autobuses y del estado de la información de transporte.',
+        description: 'Recepción y actualización de información de transporte, incluida la posición de los autobuses, su movimiento a lo largo de las rutas y otros datos dinámicos.',
       },
       {
-        title: 'Mapas y rutas',
-        description: 'Visualización de paradas, recorridos y rutas para facilitar la navegación por la ciudad.',
+        title: 'Mapas y planificación de rutas',
+        description: 'Visualización de paradas, rutas, elementos de transporte y construcción de opciones de desplazamiento dentro de una única interfaz cartográfica.',
       },
       {
-        title: 'Arquitectura móvil',
-        description: 'Base tecnológica preparada para integrar nuevas funciones y servicios dentro de STM Balance.',
+        title: 'Arquitectura escalable',
+        description: 'Base tecnológica diseñada para incorporar nuevas funciones, servicios externos, integraciones institucionales y continuar desarrollando el ecosistema STM Balance.',
       },
     ],
   },
 
   pt: {
     label: 'Tecnologia',
-    heading: 'Tecnologia preparada para a mobilidade urbana',
-    description: 'STM Balance combina tecnologias móveis, geolocalização, dados em tempo real e NFC para construir uma experiência de transporte moderna e unificada.',
+    heading: 'Plataforma tecnológica para a mobilidade urbana moderna',
+    description: 'STM Balance integra tecnologias móveis, NFC, geolocalização, serviços cartográficos e dados em tempo real em uma única base tecnológica. A arquitetura da plataforma é desenvolvida para permitir sua expansão futura, a integração com a infraestrutura de transporte, serviços externos e novas soluções digitais de mobilidade urbana.',
     technologies: [
       {
         title: 'NFC',
-        description: 'Leitura de cartões STM por tecnologia NFC em dispositivos compatíveis.',
+        description: 'Interação com cartões STM por NFC em dispositivos móveis compatíveis para acesso rápido e simples às informações do cartão.',
       },
       {
         title: 'Geolocalização',
-        description: 'Localização do usuário e representação de elementos de mobilidade no mapa.',
+        description: 'Determinação da localização do usuário e visualização de elementos atuais da mobilidade urbana de acordo com sua posição.',
       },
       {
         title: 'Dados em tempo real',
-        description: 'Atualização contínua da posição dos ônibus e do estado das informações de transporte.',
+        description: 'Recepção e atualização de informações de transporte, incluindo a posição dos ônibus, seu movimento ao longo das rotas e outros dados dinâmicos.',
       },
       {
-        title: 'Mapas e rotas',
-        description: 'Visualização de paradas, trajetos e rotas para facilitar a navegação pela cidade.',
+        title: 'Mapas e planejamento de rotas',
+        description: 'Visualização de paradas, rotas, elementos de transporte e construção de opções de deslocamento em uma única interface cartográfica.',
       },
       {
-        title: 'Arquitetura móvel',
-        description: 'Base tecnológica preparada para integrar novas funções e serviços ao STM Balance.',
+        title: 'Arquitetura escalável',
+        description: 'Base tecnológica preparada para incorporar novas funções, serviços externos, integrações institucionais e continuar desenvolvendo o ecossistema STM Balance.',
       },
     ],
   },
 
   en: {
     label: 'Technology',
-    heading: 'Technology built for urban mobility',
-    description: 'STM Balance combines mobile technologies, geolocation, real-time data and NFC to create a modern and unified transport experience.',
+    heading: 'A technology platform for modern urban mobility',
+    description: 'STM Balance brings together mobile technologies, NFC, geolocation, mapping services and real-time data within a unified technology foundation. The platform architecture is designed for future expansion, integration with transport infrastructure, external services and new digital urban mobility solutions.',
     technologies: [
       {
         title: 'NFC',
-        description: 'STM card reading through NFC technology on compatible devices.',
+        description: 'Interaction with STM cards through NFC on compatible mobile devices for fast and convenient access to card information.',
       },
       {
         title: 'Geolocation',
-        description: 'User positioning and representation of mobility elements on the map.',
+        description: 'Determining the user’s location and displaying relevant urban mobility elements based on their current position.',
       },
       {
         title: 'Real-time data',
-        description: 'Continuous updates of bus positions and transport information status.',
+        description: 'Receiving and updating transport information, including bus positions, movement along routes and other dynamic data.',
       },
       {
-        title: 'Maps and routes',
-        description: 'Visualization of stops, routes and journeys to make navigation around the city easier.',
+        title: 'Maps and route planning',
+        description: 'Displaying stops, routes and transport objects, and building travel options within a unified mapping interface.',
       },
       {
-        title: 'Mobile architecture',
-        description: 'A technology foundation designed to support new features and services within STM Balance.',
+        title: 'Scalable architecture',
+        description: 'A technology foundation designed to support new features, external services, institutional integrations and the continued development of the STM Balance ecosystem.',
       },
     ],
   },
 
   ru: {
     label: 'Технологии',
-    heading: 'Технологии для современной городской мобильности',
-    description: 'STM Balance объединяет мобильные технологии, геолокацию, данные в реальном времени и NFC для создания современной единой транспортной среды.',
+    heading: 'Технологическая платформа для современной городской мобильности',
+    description: 'STM Balance объединяет мобильные технологии, NFC, геолокацию, картографические сервисы и данные в реальном времени в единую технологическую основу. Архитектура платформы создаётся с расчётом на дальнейшее расширение, интеграцию с транспортной инфраструктурой, внешними сервисами и новыми цифровыми решениями городской мобильности.',
     technologies: [
       {
         title: 'NFC',
-        description: 'Считывание карт STM с помощью технологии NFC на совместимых устройствах.',
+        description: 'Работа с картами STM через NFC на совместимых мобильных устройствах для быстрого и удобного доступа к данным карты.',
       },
       {
         title: 'Геолокация',
-        description: 'Определение местоположения пользователя и отображение объектов городской мобильности на карте.',
+        description: 'Определение местоположения пользователя и отображение актуальных объектов городской мобильности с учётом его текущей позиции.',
       },
       {
         title: 'Данные в реальном времени',
-        description: 'Постоянное обновление положения автобусов и актуальной транспортной информации.',
+        description: 'Получение и обновление транспортной информации, включая положение автобусов, движение по маршрутам и другие динамические данные.',
       },
       {
-        title: 'Карты и маршруты',
-        description: 'Отображение остановок, маршрутов и траекторий движения для удобной навигации по городу.',
+        title: 'Карты и маршрутизация',
+        description: 'Отображение остановок, маршрутов, транспортных объектов и построение вариантов передвижения в едином картографическом интерфейсе.',
       },
       {
-        title: 'Мобильная архитектура',
-        description: 'Технологическая основа, подготовленная для интеграции новых функций и сервисов STM Balance.',
+        title: 'Масштабируемая архитектура',
+        description: 'Технологическая основа, рассчитанная на подключение новых функций, внешних сервисов, институциональных интеграций и дальнейшее развитие экосистемы STM Balance.',
       },
     ],
   },
 
   fr: {
     label: 'Technologie',
-    heading: 'Une technologie conçue pour la mobilité urbaine',
-    description: 'STM Balance combine les technologies mobiles, la géolocalisation, les données en temps réel et le NFC pour créer une expérience de transport moderne et unifiée.',
+    heading: 'Une plateforme technologique pour la mobilité urbaine moderne',
+    description: 'STM Balance réunit les technologies mobiles, le NFC, la géolocalisation, les services cartographiques et les données en temps réel au sein d’une base technologique unifiée. L’architecture de la plateforme est conçue pour permettre son évolution future, son intégration avec les infrastructures de transport, les services externes et de nouvelles solutions numériques de mobilité urbaine.',
     technologies: [
       {
         title: 'NFC',
-        description: 'Lecture des cartes STM grâce à la technologie NFC sur les appareils compatibles.',
+        description: 'Interaction avec les cartes STM via NFC sur les appareils mobiles compatibles pour un accès rapide et pratique aux informations de la carte.',
       },
       {
         title: 'Géolocalisation',
-        description: 'Localisation de l’utilisateur et représentation des éléments de mobilité sur la carte.',
+        description: 'Détermination de la position de l’utilisateur et affichage des éléments actuels de mobilité urbaine en fonction de sa localisation.',
       },
       {
         title: 'Données en temps réel',
-        description: 'Mise à jour continue de la position des bus et des informations de transport.',
+        description: 'Réception et mise à jour des informations de transport, notamment la position des bus, leurs déplacements sur les itinéraires et d’autres données dynamiques.',
       },
       {
-        title: 'Cartes et itinéraires',
-        description: 'Visualisation des arrêts, des parcours et des itinéraires pour faciliter les déplacements en ville.',
+        title: 'Cartes et planification des itinéraires',
+        description: 'Affichage des arrêts, itinéraires et éléments de transport, ainsi que création d’options de déplacement dans une interface cartographique unifiée.',
       },
       {
-        title: 'Architecture mobile',
-        description: 'Une base technologique conçue pour intégrer de nouvelles fonctions et de nouveaux services à STM Balance.',
+        title: 'Architecture évolutive',
+        description: 'Une base technologique conçue pour intégrer de nouvelles fonctions, des services externes, des intégrations institutionnelles et poursuivre le développement de l’écosystème STM Balance.',
       },
     ],
   },
 
   de: {
     label: 'Technologie',
-    heading: 'Technologie für moderne urbane Mobilität',
-    description: 'STM Balance verbindet mobile Technologien, Geolokalisierung, Echtzeitdaten und NFC zu einem modernen und einheitlichen Mobilitätserlebnis.',
+    heading: 'Eine Technologieplattform für moderne urbane Mobilität',
+    description: 'STM Balance vereint mobile Technologien, NFC, Geolokalisierung, Kartendienste und Echtzeitdaten in einer einheitlichen technologischen Grundlage. Die Plattformarchitektur ist auf zukünftige Erweiterungen, die Integration mit Verkehrsinfrastruktur, externen Diensten und neuen digitalen Lösungen für urbane Mobilität ausgelegt.',
     technologies: [
       {
         title: 'NFC',
-        description: 'Auslesen von STM-Karten per NFC-Technologie auf kompatiblen Geräten.',
+        description: 'Interaktion mit STM-Karten über NFC auf kompatiblen Mobilgeräten für einen schnellen und komfortablen Zugriff auf Kartendaten.',
       },
       {
         title: 'Geolokalisierung',
-        description: 'Bestimmung des Nutzerstandorts und Darstellung von Mobilitätselementen auf der Karte.',
+        description: 'Bestimmung des Nutzerstandorts und Anzeige aktueller Elemente der urbanen Mobilität unter Berücksichtigung der momentanen Position.',
       },
       {
         title: 'Echtzeitdaten',
-        description: 'Kontinuierliche Aktualisierung der Buspositionen und der aktuellen Verkehrsinformationen.',
+        description: 'Empfang und Aktualisierung von Verkehrsinformationen, einschließlich Buspositionen, Bewegungen entlang der Routen und weiterer dynamischer Daten.',
       },
       {
-        title: 'Karten und Routen',
-        description: 'Darstellung von Haltestellen, Strecken und Routen für eine einfachere Navigation durch die Stadt.',
+        title: 'Karten und Routenplanung',
+        description: 'Darstellung von Haltestellen, Routen und Verkehrsobjekten sowie Erstellung von Fahrtoptionen in einer einheitlichen Kartenoberfläche.',
       },
       {
-        title: 'Mobile Architektur',
-        description: 'Eine technologische Grundlage für die Integration neuer Funktionen und Dienste in STM Balance.',
+        title: 'Skalierbare Architektur',
+        description: 'Eine technologische Grundlage für neue Funktionen, externe Dienste, institutionelle Integrationen und die weitere Entwicklung des STM-Balance-Ökosystems.',
       },
     ],
   },
