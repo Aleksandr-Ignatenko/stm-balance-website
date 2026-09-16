@@ -97,24 +97,6 @@ const sliderLabel = sliderLabels[language];
         ))}
       </div>
 
-      <button
-        class="hero-slider-button hero-slider-button--previous"
-        type="button"
-        data-hero-previous
-        aria-label={sliderLabel.previous}
-      >
-        ‹
-      </button>
-
-      <button
-        class="hero-slider-button hero-slider-button--next"
-        type="button"
-        data-hero-next
-        aria-label={sliderLabel.next}
-      >
-        ›
-      </button>
-
       <div class="hero-slider-dots">
         {heroSlides.map((_, index) => (
           <button
