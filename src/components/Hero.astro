@@ -176,16 +176,6 @@ const sliderLabel = sliderLabels[language];
       }, 6000);
     };
 
-    previousButton?.addEventListener('click', () => {
-      showSlide(currentIndex - 1);
-      startAutoplay();
-    });
-
-    nextButton?.addEventListener('click', () => {
-      showSlide(currentIndex + 1);
-      startAutoplay();
-    });
-
     dots.forEach((dot, index) => {
       dot.addEventListener('click', () => {
         showSlide(index);
