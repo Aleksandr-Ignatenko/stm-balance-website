@@ -298,6 +298,7 @@ main {
   line-height: 1;
   font-weight: 500;
   white-space: nowrap;
+  max-width: 100%;
 }
 
 .hero .hero-slide-brand strong {
@@ -310,7 +311,8 @@ main {
   font-size: 2.05vw;
   line-height: 1.08;
   font-weight: 700;
-  white-space: nowrap;
+  max-width: 100%;
+  white-space: normal;
 }
 
 .hero-slide-description {
@@ -319,7 +321,8 @@ main {
   font-size: 1.38vw;
   line-height: 1.2;
   font-weight: 400;
-  white-space: nowrap;
+  max-width: 88%;
+  white-space: normal;
 }
 
 /* Более длинные переводы сохраняем в одну строку */
