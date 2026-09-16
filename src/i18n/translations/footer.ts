@@ -1,7 +1,7 @@
 import type { Language } from '../languages';
 
 type FooterTranslations = {
-  developedBy: string;
+  copyright: string;
   location: string;
   privacy: string;
   terms: string;
@@ -9,44 +9,44 @@ type FooterTranslations = {
 
 export const footerTranslations: Record<Language, FooterTranslations> = {
   es: {
-    developedBy: 'Desarrollado por Platforma SAS',
-    location: 'Montevideo — 2026',
+    copyright: '© 2026 Platforma SAS',
+    location: 'Montevideo, Uruguay',
     privacy: 'Política de Privacidad',
-    terms: 'Términos y Condiciones',
+    terms: 'Términos de Uso',
   },
 
   pt: {
-    developedBy: 'Desenvolvido pela Platforma SAS',
-    location: 'Montevidéu — 2026',
+    copyright: '© 2026 Platforma SAS',
+    location: 'Montevidéu, Uruguai',
     privacy: 'Política de Privacidade',
-    terms: 'Termos e Condições',
+    terms: 'Termos de Uso',
   },
 
   en: {
-    developedBy: 'Developed by Platforma SAS',
-    location: 'Montevideo — 2026',
+    copyright: '© 2026 Platforma SAS',
+    location: 'Montevideo, Uruguay',
     privacy: 'Privacy Policy',
-    terms: 'Terms and Conditions',
+    terms: 'Terms of Use',
   },
 
   ru: {
-    developedBy: 'Разработано Platforma SAS',
-    location: 'Монтевидео — 2026',
+    copyright: '© 2026 Platforma SAS',
+    location: 'Монтевидео, Уругвай',
     privacy: 'Политика конфиденциальности',
     terms: 'Условия использования',
   },
 
   fr: {
-    developedBy: 'Développé par Platforma SAS',
-    location: 'Montevideo — 2026',
+    copyright: '© 2026 Platforma SAS',
+    location: 'Montevideo, Uruguay',
     privacy: 'Politique de confidentialité',
-    terms: 'Conditions générales',
+    terms: 'Conditions d’utilisation',
   },
 
   de: {
-    developedBy: 'Entwickelt von Platforma SAS',
-    location: 'Montevideo — 2026',
+    copyright: '© 2026 Platforma SAS',
+    location: 'Montevideo, Uruguay',
     privacy: 'Datenschutzerklärung',
-    terms: 'Allgemeine Geschäftsbedingungen',
+    terms: 'Nutzungsbedingungen',
   },
 };
