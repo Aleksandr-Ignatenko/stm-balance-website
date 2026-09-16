@@ -10,10 +10,22 @@ type NavigationTranslations = {
   contact: string;
 };
 
+type HeroSlideTranslation = {
+  brand: string;
+  heading: string;
+  description: string;
+};
+
+type HeroSliderTranslations = {
+  navigationLabel: string;
+  slides: HeroSlideTranslation[];
+};
+
 type HeroTranslations = {
   label: string;
   heading: string;
   description: string;
+  slider: HeroSliderTranslations;
 };
 
 type ProductFeature = {
