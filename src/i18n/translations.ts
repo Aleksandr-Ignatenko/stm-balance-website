@@ -171,36 +171,96 @@ export const heroTranslations: Record<Language, HeroTranslations> = {
     label: 'Movilidad urbana inteligente',
     heading: 'Una plataforma digital unificada para la movilidad urbana.',
     description: 'Transporte, rutas, tarjeta STM y servicios en una sola aplicación.',
+    slider: {
+      navigationLabel: 'Ir a la imagen',
+      slides: [
+        {
+          brand: 'STM Balance',
+          heading: 'Movilidad urbana inteligente.',
+          description: 'Tarjeta STM, rutas y movilidad en una sola app.',
+        },
+      ],
+    },
   },
 
   pt: {
     label: 'Mobilidade urbana inteligente',
     heading: 'Uma plataforma digital unificada para a mobilidade urbana.',
     description: 'Transporte, rotas, cartão STM e serviços em um só aplicativo.',
+    slider: {
+      navigationLabel: 'Ir para a imagem',
+      slides: [
+        {
+          brand: 'STM Balance',
+          heading: 'Mobilidade urbana inteligente.',
+          description: 'Cartão STM, rotas e mobilidade em um só aplicativo.',
+        },
+      ],
+    },
   },
 
   en: {
     label: 'Smart urban mobility',
     heading: 'A unified digital platform for urban mobility.',
     description: 'Transport, routes, STM card and services in one app.',
+    slider: {
+      navigationLabel: 'Go to image',
+      slides: [
+        {
+          brand: 'STM Balance',
+          heading: 'Smart urban mobility.',
+          description: 'STM card, routes and mobility in one app.',
+        },
+      ],
+    },
   },
 
   ru: {
     label: 'Умная городская мобильность',
     heading: 'Единая цифровая платформа для городской мобильности.',
     description: 'Транспорт, маршруты, карта STM и сервисы — в одном приложении.',
+    slider: {
+      navigationLabel: 'Перейти к изображению',
+      slides: [
+        {
+          brand: 'STM Balance',
+          heading: 'Умная городская мобильность.',
+          description: 'Карта STM, маршруты и мобильность — в одном приложении.',
+        },
+      ],
+    },
   },
 
   fr: {
     label: 'Mobilité urbaine intelligente',
     heading: 'Une plateforme numérique unifiée pour la mobilité urbaine.',
     description: 'Transports, itinéraires, carte STM et services dans une seule application.',
+    slider: {
+      navigationLabel: 'Aller à l’image',
+      slides: [
+        {
+          brand: 'STM Balance',
+          heading: 'Mobilité urbaine intelligente.',
+          description: 'Carte STM, itinéraires et mobilité dans une seule application.',
+        },
+      ],
+    },
   },
 
   de: {
     label: 'Intelligente urbane Mobilität',
     heading: 'Eine einheitliche digitale Plattform für urbane Mobilität.',
     description: 'Verkehr, Routen, STM-Karte und Services in einer einzigen App.',
+    slider: {
+      navigationLabel: 'Zum Bild wechseln',
+      slides: [
+        {
+          brand: 'STM Balance',
+          heading: 'Intelligente urbane Mobilität.',
+          description: 'STM-Karte, Routen und Mobilität in einer einzigen App.',
+        },
+      ],
+    },
   },
 };
 
