@@ -12,6 +12,8 @@ stm-balance-website/
 ├── public/
 │   ├── images/
 │   │   ├── hero/
+│   │   │   └── overlay/
+│   │   │   │   └── w.png
 │   │   │   └── slides/
 │   │   │       ├── stm-balance-hero-01.jpg
 │   │   │       ├── stm-balance-hero-02.jpg
