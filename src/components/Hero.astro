@@ -127,12 +127,6 @@ const sliderLabel = sliderLabels[language];
       slider.querySelectorAll<HTMLButtonElement>('[data-hero-dot]')
     );
 
-    const previousButton =
-      slider.querySelector<HTMLButtonElement>('[data-hero-previous]');
-
-    const nextButton =
-      slider.querySelector<HTMLButtonElement>('[data-hero-next]');
-
     let currentIndex = 0;
     let autoplayTimer: number | undefined;
 
