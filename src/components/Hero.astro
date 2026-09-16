@@ -10,7 +10,7 @@ const {
 
 const hero = heroTranslations[language];
 
-// Временно скрываем текстовый блок Hero на всех языках.
+// Временно скрываем старый текстовый блок Hero на всех языках.
 const showHeroContent = false;
 
 const baseUrl = import.meta.env.BASE_URL.endsWith('/')
@@ -23,33 +23,12 @@ const heroSlides = Array.from(
     `${baseUrl}images/hero/slides/stm-balance-hero-${String(index + 1).padStart(2, '0')}.jpg`
 );
 
-const sliderLabels: Record<
-  Language,
-  {
-    slide: string;
-  }
-> = {
-  es: {
-    slide: 'Ir a la imagen',
-  },
-  pt: {
-    slide: 'Ir para a imagem',
-  },
-  en: {
-    slide: 'Go to image',
-  },
-  ru: {
-    slide: 'Перейти к изображению',
-  },
-  fr: {
-    slide: 'Aller à l’image',
-  },
-  de: {
-    slide: 'Zum Bild wechseln',
-  },
-};
+const heroLogoUrl = `${baseUrl}images/hero/overlay/w.png`;
 
-const sliderLabel = sliderLabels[language];
+const firstSlide = hero.slider.slides[0];
+
+const [brandStrong, ...brandRestParts] = firstSlide.brand.split(' ');
+const brandRest = brandRestParts.join(' ');
 ---
 
 <section class="hero">
@@ -75,6 +54,16 @@ const sliderLabel = sliderLabels[language];
       data-hero-slider
       aria-roledescription="carousel"
     >
+      <img
+        class="hero-slider-logo"
+        src={heroLogoUrl}
+        alt=""
+        width="98"
+        height="179"
+        aria-hidden="true"
+        draggable="false"
+      />
+
       <div class="hero-slider-track">
         {heroSlides.map((src, index) => (
           <div
@@ -93,6 +82,25 @@ const sliderLabel = sliderLabels[language];
               loading={index === 0 ? 'eager' : 'lazy'}
               fetchpriority={index === 0 ? 'high' : 'auto'}
             />
+
+            {index === 0 && (
+              <div
+                class={`hero-slide-copy hero-slide-copy--${language}`}
+              >
+                <h1 class="hero-slide-brand">
+                  <strong>{brandStrong}</strong>
+                  {brandRest && <span> {brandRest}</span>}
+                </h1>
+
+                <p class="hero-slide-heading">
+                  {firstSlide.heading}
+                </p>
+
+                <p class="hero-slide-description">
+                  {firstSlide.description}
+                </p>
+              </div>
+            )}
           </div>
         ))}
       </div>
@@ -106,7 +114,7 @@ const sliderLabel = sliderLabels[language];
             ]}
             type="button"
             data-hero-dot={index}
-            aria-label={`${sliderLabel.slide} ${index + 1}`}
+            aria-label={`${hero.slider.navigationLabel} ${index + 1}`}
             aria-current={index === 0 ? 'true' : undefined}
           ></button>
         ))}
