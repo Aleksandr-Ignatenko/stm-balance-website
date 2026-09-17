@@ -14,8 +14,18 @@ stm-balance-website/
 │   │   ├── hero/
 │   │   │   └── overlay/
 │   │   │   │   └── w.png
-│   │   │   └── slides/
-│   │   │       ├── stm-balance-hero-01.jpg
+    │   │   │   └── slides/
+    │   │   │       ├── mobile/
+    │   │   │       │   ├── stm-balance-hero-mobile-01.jpg
+    │   │   │       │   ├── stm-balance-hero-mobile-02.jpg
+    │   │   │       │   ├── stm-balance-hero-mobile-03.jpg
+    │   │   │       │   ├── stm-balance-hero-mobile-04.jpg
+    │   │   │       │   ├── stm-balance-hero-mobile-05.jpg
+    │   │   │       │   ├── stm-balance-hero-mobile-06.jpg
+    │   │   │       │   ├── stm-balance-hero-mobile-07.jpg
+    │   │   │       │   ├── stm-balance-hero-mobile-08.jpg
+    │   │   │       │   └── stm-balance-hero-mobile-09.jpg
+    │   │   │       ├── stm-balance-hero-01.jpg
 │   │   │       ├── stm-balance-hero-02.jpg
 │   │   │       ├── stm-balance-hero-03.jpg
 │   │   │       ├── stm-balance-hero-04.jpg
@@ -108,4 +118,4 @@ Design notes:
 - Layout and card composition were updated in section components; copy in `src/i18n/` was not changed.
 - Responsive rules: `src/styles/mobile.css` (1100 / 900 / 700 / 480).
 - Hero is capped at `--hero-max: 1200px`; desktop overlay uses viewport-capped type sizes.
-- At `max-width: 900px` hero stacks: full-width uncropped image, then caption, then dots.
+- At `max-width: 900px` hero uses dedicated images (`864×1402`) with one shared crop (`cover` / `center`). Layout is sky/text band, phone, then a floor band for the dots. Phone size and placement match across all 9 slides; only the backdrop and in-phone UI change. Overlay (logo + copy + dots) stays in the banner.

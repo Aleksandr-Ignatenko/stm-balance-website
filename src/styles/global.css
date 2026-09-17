@@ -93,7 +93,7 @@ body::after {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 1;
+  z-index: -1;
   opacity: 0.03;
   mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
@@ -180,11 +180,17 @@ a {
   top: 0;
   z-index: 100;
   width: 100%;
-  background: rgba(251, 253, 255, 0.72);
-  backdrop-filter: blur(20px) saturate(1.3);
-  -webkit-backdrop-filter: blur(20px) saturate(1.3);
+  background: rgba(251, 253, 255, 0.48);
+  backdrop-filter: blur(24px) saturate(1.4);
+  -webkit-backdrop-filter: blur(24px) saturate(1.4);
   border-bottom: 1px solid var(--border);
   box-shadow: inset 0 1px 0 var(--highlight-top);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .site-header {
+    background: rgba(251, 253, 255, 0.94);
+  }
 }
 
 .header-container {
@@ -431,10 +437,14 @@ a {
   visibility: visible;
 }
 
+.hero-slide picture,
 .hero-slide img {
   width: 100%;
   height: 100%;
   display: block;
+}
+
+.hero-slide img {
   object-fit: cover;
 }
 
@@ -569,6 +579,7 @@ a {
     display: block;
   }
 
+  .hero-slide picture,
   .hero-slide img {
     width: 100%;
     height: 100%;

@@ -164,66 +164,52 @@
   }
 
   .hero {
-    padding: 0 0 8px;
+    padding: 0;
   }
 
   .hero-slider {
-    display: flex;
-    flex-direction: column;
-    aspect-ratio: auto;
-    overflow: visible;
-    background: transparent;
-    box-shadow: none;
-    border-radius: 0;
+    display: block;
+    aspect-ratio: 864 / 1402;
+    overflow: hidden;
+    background: var(--bg-sunken);
   }
 
   .hero-slider-logo {
-    display: none;
+    display: block;
+    width: 36px;
+    left: 20px;
+    top: 28px;
   }
 
-  .hero-slider-track {
-    position: relative;
-    display: block;
-    width: 100%;
+  .hero-slide picture {
+    position: absolute;
+    inset: 0;
+    width: auto;
     height: auto;
   }
 
-  .hero-slide {
-    position: absolute;
-    inset: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    pointer-events: none;
-  }
-
-  .hero-slide--active {
-    position: relative;
-    z-index: 1;
-    pointer-events: auto;
+  .hero-slide picture,
+  .hero-slide img {
+    object-fit: cover;
+    object-position: center;
   }
 
   .hero-slide img {
     width: 100%;
-    height: auto;
-    aspect-ratio: 1672 / 941;
-    object-fit: contain;
-    object-position: center;
-    background: var(--bg-sunken);
+    height: 100%;
   }
 
   .hero-slide-copy {
-    position: static;
-    left: auto;
-    top: auto;
-    width: 100%;
-    pointer-events: auto;
+    position: absolute;
+    left: 64px;
+    right: 20px;
+    top: 26px;
+    width: auto;
+    pointer-events: none;
   }
 
   .hero-slide-copy-inner {
-    padding: 20px 20px 0;
+    padding: 0;
     border: 0;
     border-radius: 0;
     background: none;
@@ -244,30 +230,50 @@
 
   .hero .hero-slide-brand {
     font-size: clamp(28px, 8vw, 36px);
-    white-space: normal;
+    white-space: nowrap;
   }
 
   .hero-slide-heading {
-    margin-top: 10px;
-    font-size: clamp(18px, 4.4vw, 22px);
-    line-height: 1.25;
+    margin-top: 6px;
+    font-size: clamp(16px, 4.4vw, 20px);
+    line-height: 1.2;
   }
 
   .hero-slide-description {
-    margin-top: 8px;
-    max-width: 40em;
-    font-size: 15px;
-    line-height: 1.5;
+    margin-top: 6px;
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  .hero-slider-track {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-slide {
+    position: absolute;
+    inset: 0;
+    display: block;
+    pointer-events: none;
+  }
+
+  .hero-slide--active {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: auto;
   }
 
   .hero-slider-dots {
-    position: static;
-    left: auto;
-    bottom: auto;
-    transform: none;
-    align-self: center;
-    margin: 16px 0 12px;
-    flex-shrink: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
+    margin: 0;
+    z-index: 5;
   }
 }
 
@@ -306,14 +312,6 @@
   .company-details,
   .contact-channels {
     grid-template-columns: 1fr;
-  }
-
-  .hero-slide-copy-inner {
-    padding: 16px 20px 0;
-  }
-
-  .hero-slider-dots {
-    margin: 16px 0 8px;
   }
 
   .team-panel,

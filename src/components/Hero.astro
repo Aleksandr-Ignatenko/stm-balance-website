@@ -19,8 +19,14 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 
 const heroSlides = Array.from(
   { length: 9 },
-  (_, index) =>
-    `${baseUrl}images/hero/slides/stm-balance-hero-${String(index + 1).padStart(2, '0')}.jpg`
+  (_, index) => {
+    const n = String(index + 1).padStart(2, '0');
+
+    return {
+      desktop: `${baseUrl}images/hero/slides/stm-balance-hero-${n}.jpg`,
+      mobile: `${baseUrl}images/hero/slides/mobile/stm-balance-hero-mobile-${n}.jpg`,
+    };
+  }
 );
 
 const heroLogoUrl = `${baseUrl}images/hero/overlay/w.png`;
@@ -60,7 +66,7 @@ const heroLogoUrl = `${baseUrl}images/hero/overlay/w.png`;
       />
 
       <div class="hero-slider-track">
-        {heroSlides.map((src, index) => {
+        {heroSlides.map((slide, index) => {
           const slideText = hero.slider.slides[index];
           const [brandStrong, ...brandRestParts] = (slideText?.brand ?? 'STM Balance').split(' ');
           const brandRest = brandRestParts.join(' ');
@@ -69,19 +75,28 @@ const heroLogoUrl = `${baseUrl}images/hero/overlay/w.png`;
             <div
               class:list={[
                 'hero-slide',
+                `hero-slide--${index + 1}`,
                 { 'hero-slide--active': index === 0 }
               ]}
               data-hero-slide
               aria-hidden={index === 0 ? 'false' : 'true'}
             >
-              <img
-                src={src}
-                alt=""
-                width="1672"
-                height="941"
-                loading={index === 0 ? 'eager' : 'lazy'}
-                fetchpriority={index === 0 ? 'high' : 'auto'}
-              />
+              <picture>
+                <source
+                  media="(max-width: 900px)"
+                  srcset={slide.mobile}
+                  width="864"
+                  height="1402"
+                />
+                <img
+                  src={slide.desktop}
+                  alt=""
+                  width="1672"
+                  height="941"
+                  loading={index === 0 ? 'eager' : 'lazy'}
+                  fetchpriority={index === 0 ? 'high' : 'auto'}
+                />
+              </picture>
 
               {slideText && (
                 <div class={`hero-slide-copy hero-slide-copy--${language}`}>
@@ -184,6 +199,14 @@ const heroLogoUrl = `${baseUrl}images/hero/overlay/w.png`;
         showSlide(currentIndex + 1);
       }, 6000);
     };
+
+    const requestedSlide = Number(
+      new URLSearchParams(window.location.search).get('slide') || '0'
+    );
+
+    if (!Number.isNaN(requestedSlide) && requestedSlide > 0) {
+      showSlide(requestedSlide);
+    }
 
     dots.forEach((dot, index) => {
       dot.addEventListener('click', () => {
