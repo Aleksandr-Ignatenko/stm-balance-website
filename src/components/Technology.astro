@@ -13,21 +13,18 @@ const technology = technologyTranslations[language];
 
 <section class="technology-section" id="tecnologia">
   <div class="technology-container">
-    <div class="technology-content">
+    <header class="section-header">
       <p class="section-label">{technology.label}</p>
-
       <h2>{technology.heading}</h2>
-
       <p class="section-description">
         {technology.description}
       </p>
-    </div>
+    </header>
 
     <div class="technology-list">
       {technology.technologies.map((item) => (
-        <article class="technology-item">
+        <article class="technology-item surface-card">
           <h3>{item.title}</h3>
-
           <p>
             {item.description}
           </p>

@@ -13,21 +13,18 @@ const company = companyTranslations[language];
 
 <section class="company-section" id="empresa">
   <div class="company-container">
-    <div class="company-content">
+    <header class="section-header">
       <p class="section-label">{company.label}</p>
-
       <h2>{company.heading}</h2>
-
       <p class="section-description">
         {company.description}
       </p>
-    </div>
+    </header>
 
     <div class="company-details">
       {company.details.map((item) => (
-        <article class="company-detail">
+        <article class="company-detail surface-card">
           <h3>{item.title}</h3>
-
           <p>
             {item.description}
           </p>

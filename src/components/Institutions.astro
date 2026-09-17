@@ -13,21 +13,18 @@ const institutions = institutionsTranslations[language];
 
 <section class="institutions-section" id="instituciones">
   <div class="institutions-container">
-    <div class="institutions-content">
+    <header class="section-header">
       <p class="section-label">{institutions.label}</p>
-
       <h2>{institutions.heading}</h2>
-
       <p class="section-description">
         {institutions.description}
       </p>
-    </div>
+    </header>
 
     <div class="institutions-list">
       {institutions.directions.map((item) => (
-        <article class="institutions-item">
+        <article class="institutions-item surface-card">
           <h3>{item.title}</h3>
-
           <p>
             {item.description}
           </p>

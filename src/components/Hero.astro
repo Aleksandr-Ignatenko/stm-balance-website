@@ -85,18 +85,20 @@ const heroLogoUrl = `${baseUrl}images/hero/overlay/w.png`;
 
               {slideText && (
                 <div class={`hero-slide-copy hero-slide-copy--${language}`}>
-                  <h1 class="hero-slide-brand">
-                    <strong>{brandStrong}</strong>
-                    {brandRest && <span> {brandRest}</span>}
-                  </h1>
+                  <div class="hero-slide-copy-inner">
+                    <h1 class="hero-slide-brand">
+                      <strong>{brandStrong}</strong>
+                      {brandRest && <span> {brandRest}</span>}
+                    </h1>
 
-                  <p class="hero-slide-heading">
-                    {slideText.heading}
-                  </p>
+                    <p class="hero-slide-heading">
+                      {slideText.heading}
+                    </p>
 
-                  <p class="hero-slide-description">
-                    {slideText.description}
-                  </p>
+                    <p class="hero-slide-description">
+                      {slideText.description}
+                    </p>
+                  </div>
                 </div>
               )}
             </div>

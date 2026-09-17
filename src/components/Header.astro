@@ -46,7 +46,8 @@ const getLanguageUrl = (code: string) =>
 <header class="site-header">
   <div class="header-container">
     <a class="brand" href={languageHomeUrl}>
-      STM Balance
+      <strong>STM</strong>
+      <span>Balance</span>
     </a>
 
     <nav class="main-navigation" aria-label={navigationAriaLabel}>
@@ -59,53 +60,55 @@ const getLanguageUrl = (code: string) =>
       <a href={`${languageHomeUrl}#contacto`}>{navigation.contact}</a>
     </nav>
 
-    <div class="language-switcher">
-      <details>
-        <summary>{languages[language]}</summary>
+    <div class="header-tools">
+      <div class="language-switcher">
+        <details>
+          <summary>{languages[language]}</summary>
 
-        <div class="language-menu">
-          {Object.entries(languages).map(([code, label]) => (
-            <a
-              href={getLanguageUrl(code)}
-              aria-current={code === language ? 'page' : undefined}
-            >
-              {label}
-            </a>
-          ))}
+          <div class="language-menu">
+            {Object.entries(languages).map(([code, label]) => (
+              <a
+                href={getLanguageUrl(code)}
+                aria-current={code === language ? 'page' : undefined}
+              >
+                {label}
+              </a>
+            ))}
+          </div>
+        </details>
+      </div>
+
+      <details class="mobile-menu">
+        <summary class="mobile-menu-toggle" aria-label={navigationAriaLabel}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </summary>
+
+        <div class="mobile-menu-panel">
+          <nav class="mobile-navigation" aria-label={navigationAriaLabel}>
+            <a href={languageHomeUrl}>{navigation.home}</a>
+            <a href={`${languageHomeUrl}#producto`}>{navigation.product}</a>
+            <a href={`${languageHomeUrl}#tecnologia`}>{navigation.technology}</a>
+            <a href={`${languageHomeUrl}#instituciones`}>{navigation.institutions}</a>
+            <a href={`${languageHomeUrl}#empresa`}>{navigation.company}</a>
+            <a href={`${languageHomeUrl}#equipo`}>{navigation.team}</a>
+            <a href={`${languageHomeUrl}#contacto`}>{navigation.contact}</a>
+          </nav>
+
+          <div class="mobile-language-menu">
+            {Object.entries(languages).map(([code, label]) => (
+              <a
+                href={getLanguageUrl(code)}
+                aria-current={code === language ? 'page' : undefined}
+              >
+                {label}
+              </a>
+            ))}
+          </div>
         </div>
       </details>
     </div>
-
-    <details class="mobile-menu">
-      <summary class="mobile-menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </summary>
-
-      <div class="mobile-menu-panel">
-        <nav class="mobile-navigation" aria-label={navigationAriaLabel}>
-          <a href={languageHomeUrl}>{navigation.home}</a>
-          <a href={`${languageHomeUrl}#producto`}>{navigation.product}</a>
-          <a href={`${languageHomeUrl}#tecnologia`}>{navigation.technology}</a>
-          <a href={`${languageHomeUrl}#instituciones`}>{navigation.institutions}</a>
-          <a href={`${languageHomeUrl}#empresa`}>{navigation.company}</a>
-          <a href={`${languageHomeUrl}#equipo`}>{navigation.team}</a>
-          <a href={`${languageHomeUrl}#contacto`}>{navigation.contact}</a>
-        </nav>
-
-        <div class="mobile-language-menu">
-          {Object.entries(languages).map(([code, label]) => (
-            <a
-              href={getLanguageUrl(code)}
-              aria-current={code === language ? 'page' : undefined}
-            >
-              {label}
-            </a>
-          ))}
-        </div>
-      </div>
-    </details>
   </div>
 </header>
 

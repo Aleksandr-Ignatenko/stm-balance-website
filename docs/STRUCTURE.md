@@ -101,4 +101,11 @@ stm-balance-website/
 ├── astro.config.mjs
 └── package.json
 ```
-_Last updated: 2026-09-10_
+_Last updated: 2026-09-17_
+
+Design notes:
+- Light STM palette (`#024b86`) lives in `src/styles/global.css` tokens.
+- Layout and card composition were updated in section components; copy in `src/i18n/` was not changed.
+- Responsive rules: `src/styles/mobile.css` (1100 / 900 / 700 / 480).
+- Hero is capped at `--hero-max: 1200px`; desktop overlay uses viewport-capped type sizes.
+- At `max-width: 900px` hero stacks: full-width uncropped image, then caption, then dots.

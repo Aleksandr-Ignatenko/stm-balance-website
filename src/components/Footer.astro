@@ -25,37 +25,10 @@ const termsUrl = `${baseUrl}${language}/terms/`;
 
 <footer class="site-footer">
   <div class="footer-container">
-    <p>STM Balance</p>
-    <p>{footer.copyright}</p>
-
-    <div class="footer-social">
-      <img
-        src={linkedinIconUrl}
-        alt="LinkedIn"
-        width="32"
-        height="32"
-      />
-
-      <img
-        src={xIconUrl}
-        alt="X"
-        width="32"
-        height="32"
-      />
-
-      <img
-        src={telegramIconUrl}
-        alt="Telegram"
-        width="32"
-        height="32"
-      />
-
-      <img
-        src={emailIconUrl}
-        alt="Email"
-        width="32"
-        height="32"
-      />
+    <div class="footer-brand">
+      <p>STM Balance</p>
+      <p>{footer.copyright}</p>
+      <p>{footer.location}</p>
     </div>
 
     <div class="footer-legal">
@@ -63,6 +36,42 @@ const termsUrl = `${baseUrl}${language}/terms/`;
       <a href={termsUrl}>{footer.terms}</a>
     </div>
 
-    <p>{footer.location}</p>
+    <div class="footer-social">
+      <span>
+        <img
+          src={linkedinIconUrl}
+          alt="LinkedIn"
+          width="32"
+          height="32"
+        />
+      </span>
+
+      <span>
+        <img
+          src={xIconUrl}
+          alt="X"
+          width="32"
+          height="32"
+        />
+      </span>
+
+      <span>
+        <img
+          src={telegramIconUrl}
+          alt="Telegram"
+          width="32"
+          height="32"
+        />
+      </span>
+
+      <span>
+        <img
+          src={emailIconUrl}
+          alt="Email"
+          width="32"
+          height="32"
+        />
+      </span>
+    </div>
   </div>
 </footer>
