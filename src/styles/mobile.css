@@ -148,6 +148,14 @@
     grid-template-columns: 1fr;
   }
 
+  .product-layout {
+    grid-template-areas:
+      "heading"
+      "visual"
+      "copy";
+    row-gap: 24px;
+  }
+
   .product-features,
   .technology-list,
   .institutions-list,
@@ -156,7 +164,7 @@
   }
 
   .product-visual {
-    order: -1;
+    margin: 8px 0;
   }
 
   .product-mockup {
@@ -172,6 +180,7 @@
     aspect-ratio: 864 / 1402;
     overflow: hidden;
     background: var(--bg-sunken);
+    touch-action: pan-y;
   }
 
   .hero-slider-logo {

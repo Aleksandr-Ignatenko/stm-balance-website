@@ -669,8 +669,31 @@ a {
 .product-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(220px, 320px);
-  gap: 48px;
-  align-items: center;
+  grid-template-areas:
+    "heading visual"
+    "copy visual";
+  column-gap: 48px;
+  row-gap: 20px;
+  align-items: start;
+}
+
+.product-heading {
+  grid-area: heading;
+}
+
+.product-copy {
+  grid-area: copy;
+}
+
+.product-copy .section-description {
+  margin-top: 0;
+}
+
+.product-visual {
+  grid-area: visual;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 
 .product-goal {
@@ -696,11 +719,6 @@ a {
   color: var(--text-2);
   font-size: 16px;
   line-height: 1.65;
-}
-
-.product-visual {
-  display: flex;
-  justify-content: center;
 }
 
 .product-mockup {
