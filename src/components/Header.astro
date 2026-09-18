@@ -87,25 +87,28 @@ const getLanguageUrl = (code: string) =>
         </summary>
 
         <div class="mobile-menu-panel">
-          <nav class="mobile-navigation" aria-label={navigationAriaLabel}>
-            <a href={languageHomeUrl}>{navigation.home}</a>
-            <a href={`${languageHomeUrl}#producto`}>{navigation.product}</a>
-            <a href={`${languageHomeUrl}#tecnologia`}>{navigation.technology}</a>
-            <a href={`${languageHomeUrl}#instituciones`}>{navigation.institutions}</a>
-            <a href={`${languageHomeUrl}#empresa`}>{navigation.company}</a>
-            <a href={`${languageHomeUrl}#equipo`}>{navigation.team}</a>
-            <a href={`${languageHomeUrl}#contacto`}>{navigation.contact}</a>
-          </nav>
+          <div class="mobile-menu-panel-blur" aria-hidden="true"></div>
+          <div class="mobile-menu-panel-inner">
+            <nav class="mobile-navigation" aria-label={navigationAriaLabel}>
+              <a href={languageHomeUrl}>{navigation.home}</a>
+              <a href={`${languageHomeUrl}#producto`}>{navigation.product}</a>
+              <a href={`${languageHomeUrl}#tecnologia`}>{navigation.technology}</a>
+              <a href={`${languageHomeUrl}#instituciones`}>{navigation.institutions}</a>
+              <a href={`${languageHomeUrl}#empresa`}>{navigation.company}</a>
+              <a href={`${languageHomeUrl}#equipo`}>{navigation.team}</a>
+              <a href={`${languageHomeUrl}#contacto`}>{navigation.contact}</a>
+            </nav>
 
-          <div class="mobile-language-menu">
-            {Object.entries(languages).map(([code, label]) => (
-              <a
-                href={getLanguageUrl(code)}
-                aria-current={code === language ? 'page' : undefined}
-              >
-                {label}
-              </a>
-            ))}
+            <div class="mobile-language-menu">
+              {Object.entries(languages).map(([code, label]) => (
+                <a
+                  href={getLanguageUrl(code)}
+                  aria-current={code === language ? 'page' : undefined}
+                >
+                  {label}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </details>
